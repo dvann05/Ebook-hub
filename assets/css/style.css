@@ -1,0 +1,890 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    outline:none;
+}
+
+input{
+    outline:none;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.header .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 0;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo img{
+    height:80px;
+    width:auto;
+    display:block;
+}
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-box{
+    display:flex;
+    flex:1;
+    max-width:500px;
+}
+
+.search-box input{
+    flex:1;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-right:none;
+    border-radius:8px 0 0 8px;
+    font-size:15px;
+}
+
+.search-box input:focus{
+    border-color:#2563eb;
+}
+
+.search-box button{
+    background:#2563eb;
+    color:#fff;
+    padding:0 20px;
+    border-radius:0 8px 8px 0;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:16px;
+    opacity:.95;
+    line-height:1.8;
+}
+
+/* ==========================================
+   RESPONSIVE HEADER
+========================================== */
+
+@media(max-width:768px){
+
+    .header .container{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .logo{
+        text-align:center;
+        font-size:26px;
+    }
+
+    .search-box{
+        max-width:100%;
+    }
+
+    .hero{
+        padding:45px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+}
+
+/* ==========================================
+   CATEGORY
+========================================== */
+
+.category-list{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding:5px 0;
+}
+
+.category-list::-webkit-scrollbar{
+    display:none;
+}
+
+.category-btn{
+    white-space:nowrap;
+    padding:10px 18px;
+    border-radius:999px;
+    border:1px solid #2563eb;
+    background:#fff;
+    color:#2563eb;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.category-btn:hover,
+.category-btn.active{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* ==========================================
+   EBOOK
+========================================== */
+
+.ebooks{
+    padding:35px 0;
+}
+
+.ebooks h2{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.ebook-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.ebook-card{
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.ebook-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.ebook-card img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.ebook-card h3{
+    font-size:15px;
+    font-weight:700;
+    padding:10px 10px 4px;
+    line-height:1.4;
+    height:50px;
+    overflow:hidden;
+}
+
+.ebook-card p{
+    padding:0 10px;
+    font-size:12px;
+    color:#666;
+}
+
+/* ==========================================
+   DOWNLOAD INFO
+========================================== */
+
+.ebook-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 10px;
+    font-size:12px;
+    color:#777;
+}
+
+.ebook-info span{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.ebook-card a{
+    display:block;
+    margin:10px;
+    padding:10px;
+    background:#2563eb;
+    color:#ffffff;
+    text-align:center;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.ebook-card a:hover{
+    background:#1d4ed8;
+}
+
+.guide-btn{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:768px){
+
+    .ebook-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+@media(min-width:1200px){
+
+    .ebook-grid{
+        grid-template-columns:repeat(5,1fr);
+    }
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:#111827;
+    color:#ffffff;
+    margin-top:50px;
+}
+
+footer .container{
+    padding:30px 0;
+    text-align:center;
+}
+
+footer p{
+    font-size:14px;
+    color:#d1d5db;
+}
+
+footer a{
+    color:#60a5fa;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+    padding:40px 0;
+}
+
+h2{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+/* ==========================================
+   UTILITIES
+========================================== */
+
+.text-center{
+    text-align:center;
+}
+
+.mt-10{
+    margin-top:10px;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mt-30{
+    margin-top:30px;
+}
+
+.mb-10{
+    margin-bottom:10px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.mb-30{
+    margin-bottom:30px;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.ebook-card{
+    animation:fadeUp .4s ease;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .container{
+        width:94%;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    footer .container{
+        padding:25px 0;
+    }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(min-width:769px) and (max-width:1024px){
+
+    .container{
+        width:92%;
+    }
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:1200px){
+
+    .container{
+        max-width:1280px;
+    }
+
+}
+
+/* ==========================================
+   DETAIL EBOOK
+========================================== */
+
+.detail{
+    padding:40px 0;
+}
+
+.detail-box{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:30px;
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.detail-cover img{
+    width:100%;
+    border-radius:12px;
+    aspect-ratio:3/4;
+    object-fit:cover;
+}
+
+.detail-content h1{
+    font-size:30px;
+    margin-bottom:15px;
+    color:#111827;
+}
+
+/* ==========================================
+   META
+========================================== */
+
+.ebook-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.ebook-meta span{
+    background:#eef4ff;
+    color:#2563eb;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================================
+   DESKRIPSI
+========================================== */
+
+.detail-content h3{
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.detail-content p{
+    margin-bottom:12px;
+    color:#555;
+    line-height:1.8;
+}
+
+/* ==========================================
+   BANNER IKLAN
+========================================== */
+
+.ads{
+    margin:25px 0;
+}
+
+.ads img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+.download-btn{
+    display:inline-block;
+    background:#16a34a;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#15803d;
+    transform:translateY(-2px);
+}
+
+.download-info{
+    background:#eef6ff;
+    border-left:5px solid #2563eb;
+    padding:18px;
+    border-radius:12px;
+    margin:20px 0;
+}
+
+.download-info h3{
+    margin-bottom:10px;
+    color:#2563eb;
+}
+
+.download-info ol{
+    margin-left:20px;
+}
+
+.download-info li{
+    margin:8px 0;
+    line-height:1.6;
+}
+
+.download-status{
+    margin:15px 0;
+    padding:12px;
+    text-align:center;
+    background:#fff8e1;
+    color:#b45309;
+    border-radius:10px;
+    font-weight:600;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .detail-box{
+        grid-template-columns:1fr;
+    }
+
+    .detail-cover{
+        max-width:260px;
+        margin:auto;
+    }
+
+    .detail-content h1{
+        font-size:24px;
+    }
+
+    .ebook-meta{
+        gap:8px;
+    }
+
+    .ebook-meta span{
+        font-size:13px;
+        padding:7px 12px;
+    }
+
+    .download-btn{
+        display:block;
+        text-align:center;
+        width:100%;
+    }
+
+}
+
+/* ==========================================
+   DOWNLOAD PAGE
+========================================== */
+
+.download-page{
+    padding:40px 0;
+}
+
+.download-box{
+    max-width:800px;
+    margin:auto;
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.download-box h1{
+    text-align:center;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.download-box>p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+/* ==========================================
+   FILE INFO
+========================================== */
+
+.file-info{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:25px;
+}
+
+.file-info p{
+    margin:10px 0;
+    color:#374151;
+}
+
+.file-info b{
+    color:#111827;
+}
+
+/* ==========================================
+   ADS
+========================================== */
+
+.ads{
+    margin:25px 0;
+}
+
+.ads img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown-box{
+    text-align:center;
+    margin:30px 0;
+}
+
+.countdown-box p{
+    margin-bottom:10px;
+    color:#555;
+}
+
+.countdown-box h2{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    background:#2563eb;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    font-weight:bold;
+}
+
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+.download-btn{
+    display:block;
+    width:100%;
+    padding:16px;
+    text-align:center;
+    background:#16a34a;
+    color:#fff;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.download-btn.disabled{
+    background:#9ca3af;
+    cursor:not-allowed;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .download-box{
+        padding:20px;
+    }
+
+    .countdown-box h2{
+        width:90px;
+        height:90px;
+        font-size:34px;
+    }
+
+    .download-btn{
+        font-size:16px;
+    }
+
+}
+
+/* ========================
+SCROLL
+===========================*/
+
+.scroll-top-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+    transition:.3s;
+    z-index:999;
+}
+
+.scroll-top-btn.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.scroll-top-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ===================
+POP UP
+====================== */
+
+.download-popup{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:280px;
+
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    display:flex;
+    gap:10px;
+    padding:10px;
+
+    align-items:center;
+
+    opacity:0;
+    transform:translateY(30px);
+
+    transition:.4s;
+
+    z-index:9999;
+}
+
+.download-popup.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.download-popup img{
+    width:55px;
+    height:75px;
+    border-radius:8px;
+    object-fit:cover;
+}
+
+.popup-content strong{
+    display:block;
+    color:#2563eb;
+    font-size:14px;
+}
+
+.popup-content p{
+    font-size:12px;
+    color:#555;
+    margin-top:4px;
+  }
