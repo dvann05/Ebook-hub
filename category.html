@@ -1,0 +1,37 @@
+const params = new URLSearchParams(window.location.search);
+
+const category = params.get("name") || "";
+
+const title = document.getElementById("categoryTitle");
+
+const text = document.getElementById("categoryText");
+
+const grid = document.getElementById("categoryGrid");
+
+title.textContent = category;
+
+text.textContent = `Kategori: ${category}`;
+
+let html = "";
+
+ebooks.forEach(ebook => {
+
+    if(ebook.category === category){
+
+        html += createEbookCard(ebook);
+
+    }
+
+});
+
+if(html === ""){
+
+    html = `
+    <p style="text-align:center;">
+        Belum ada ebook pada kategori ini.
+    </p>
+    `;
+
+}
+
+grid.innerHTML = html;

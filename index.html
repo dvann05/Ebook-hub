@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookHub - Download Ebook Gratis</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
+    <img src="assets/images/logo/logo.webp" alt="EbookHub">
+</div>
+
+            <form class="search-box">
+                <input type="text"
+                id="searchInput"
+                 placeholder="Cari ebook...">
+                <button type="submit">Cari</button>
+            </form>
+
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Download Ribuan Ebook Gratis</h1>
+
+            <p>
+                Temukan ebook terbaik untuk belajar, bisnis,
+                pemrograman, desain, AI, dan banyak kategori lainnya.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Kategori -->
+
+    <section class="category">
+
+    <div class="container">
+
+        <h2>Kategori</h2>
+
+        <div class="category-list">
+
+            <button class="category-btn" data-category="Semua">Semua</button>
+
+            <button class="category-btn" data-category="Programming">Programming</button>
+
+            <button class="category-btn" data-category="Bisnis">Bisnis</button>
+
+            <button class="category-btn" data-category="AI">AI</button>
+
+            <button class="category-btn" data-category="Canva">Canva</button>
+
+            <button class="category-btn" data-category="Desain">Desain</button>
+
+            <button class="category-btn" data-category="Marketing">Marketing</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Ebook -->
+
+    <section class="ebooks">
+
+        <div class="container">
+
+            <h2>Ebook Terbaru</h2>
+
+            <div class="ebook-grid" id="ebookGrid" >
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 EbookHub. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+    
+    <button id="scrollTopBtn" class="scroll-top-btn">
+    ↑
+    </button>
+    
+    <div id="downloadPopup" class="download-popup">
+    <img id="popupImage" src="" alt="">
+    <div class="popup-content">
+        <strong id="popupName"></strong>
+        <p id="popupText"></p>
+    </div>
+</div>
+    
+<script src="assets/js/data.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/category.js"></script>
+<script src="assets/js/scroll.js"></script>
+<script src="assets/js/popup.js"></script>
+
+<button id="scrollTopBtn" class="scroll-top-btn">
+    ↑
+
+</body>
+</html>
