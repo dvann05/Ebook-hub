@@ -44,9 +44,10 @@ input{
 ========================================== */
 
 .container{
-    width:95%;
-    max-width:1200px;
-    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
 }
 
 /* ==========================================
@@ -73,19 +74,17 @@ input{
    LOGO
 ========================================== */
 
-.logo img{
-    height:80px;
-    width:auto;
-    display:block;
+.logo{
+    display:flex;
+    align-items:center;
 }
 /* ==========================================
    SEARCH BOX
 ========================================== */
 
 .search-box{
-    display:flex;
-    flex:1;
-    max-width:500px;
+    width:100%;
+    margin-top:20px;
 }
 
 .search-box input{
@@ -894,6 +893,8 @@ POP UP
     border:none;
     font-size:32px;
     cursor:pointer;
+    padding:8px;
+    margin-left:auto;
 }
 
 .overlay{
