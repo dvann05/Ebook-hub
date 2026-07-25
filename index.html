@@ -234,5 +234,13 @@
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/popup.js"></script>
 
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js");
+    });
+}
+</script>
+  
 </body>
                 </html>
