@@ -45,6 +45,8 @@ input{
 ========================================== */
 
 .container{
+    width:94%;
+    margin:auto;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -54,14 +56,12 @@ input{
 /* ==========================================
    HEADER
 ========================================== */
-
 .header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     background:#fff;
-    padding:15px;
     z-index:9999;
     box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
@@ -70,6 +70,7 @@ input{
     width:94%;
     margin:auto;
     display:block;
+   padding:15px 0;
 }
 
 .header-top{
@@ -151,12 +152,6 @@ input{
 /* ==========================================
    RESPONSIVE HEADER
 ========================================== */
-
-@media(max-width:768px){
-
-    .header .container{
-        display:block;
-    }
 
     .header-top{
         display:flex;
