@@ -80,6 +80,11 @@ input{
     display:flex;
     align-items:center;
 }
+
+.logo img{
+    width:220px;
+    height:auto;
+}
 /* ==========================================
    SEARCH BOX
 ========================================== */
