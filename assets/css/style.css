@@ -47,10 +47,6 @@ input{
 .container{
     width:94%;
     margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
 }
 
 /* ==========================================
