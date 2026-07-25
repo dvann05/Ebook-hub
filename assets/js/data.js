@@ -79,7 +79,7 @@ const ebooks = [
     format:"PDF",
     rating:4.8,
     downloads:3200,
-    image:"assets/images/ebook/bisnis.jpg",
+    image:"assets/images/ebook/bisnis.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/bisnis.pdf",
     description:"Panduan membangun bisnis digital dari nol."
@@ -96,7 +96,7 @@ const ebooks = [
     format:"PDF",
     rating:4.9,
     downloads:5400,
-    image:"assets/images/ebook/ai.jpg",
+    image:"assets/images/ebook/ai.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/ai.pdf",
     description:"Belajar memanfaatkan AI untuk produktivitas dan bisnis."
@@ -113,7 +113,7 @@ const ebooks = [
     format:"PDF",
     rating:4.7,
     downloads:4100,
-    image:"assets/images/ebook/canva.jpg",
+    image:"assets/images/ebook/canva.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/canva.pdf",
     description:"Panduan lengkap desain menggunakan Canva."
