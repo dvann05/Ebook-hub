@@ -927,7 +927,7 @@ POP UP
     opacity:0;
     visibility:hidden;
     transition:.3s;
-    z-index:998;
+    z-index:10000;
 }
 
 .overlay.active{
@@ -944,7 +944,7 @@ POP UP
     background:#fff;
     box-shadow:-5px 0 20px rgba(0,0,0,.15);
     transition:.35s;
-    z-index:999;
+    z-index:10001;
     padding:25px;
 }
 
