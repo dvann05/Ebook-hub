@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
+    <!-- Charset & Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EbookHub - Download Ebook Gratis</title>
 
+    <!-- Primary SEO -->
+    <title>EbookHub | Download Ebook Gratis & Premium</title>
+
+    <meta name="title" content="EbookHub | Download Ebook Gratis & Premium">
+    <meta name="description" content="EbookHub menyediakan koleksi ebook gratis dan premium tentang AI, teknologi, bisnis, desain, pemrograman, produktivitas, dan pengembangan diri.">
+    <meta name="keywords" content="ebook, ebook gratis, ebook premium, AI, ChatGPT, Canva, Termux, bisnis, teknologi, programming, coding, desain, PDF">
+    <meta name="author" content="EbookHub">
+    <meta name="publisher" content="EbookHub">
+    <meta name="application-name" content="EbookHub">
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#16a34a">
+    <meta name="color-scheme" content="light">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ebookhub.my.id/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EbookHub">
+    <meta property="og:title" content="EbookHub | Download Ebook Gratis & Premium">
+    <meta property="og:description" content="Temukan koleksi ebook gratis dan premium berkualitas di EbookHub.">
+    <meta property="og:url" content="https://ebookhub.my.id/">
+    <meta property="og:image" content="https://ebookhub.my.id/assets/images/seo/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EbookHub | Download Ebook Gratis & Premium">
+    <meta name="twitter:description" content="Temukan koleksi ebook gratis dan premium berkualitas di EbookHub.">
+    <meta name="twitter:image" content="https://ebookhub.my.id/assets/images/seo/og-image.jpg">
+
+    <!-- Mobile -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="EbookHub">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
 
     <!-- Header -->
@@ -14,13 +68,11 @@
         <div class="container">
 
             <div class="logo">
-    <img src="assets/images/logo/logo.webp" alt="EbookHub">
-</div>
+                <img src="assets/images/logo/logo.webp" alt="EbookHub">
+            </div>
 
             <form class="search-box">
-                <input type="text"
-                id="searchInput"
-                 placeholder="Cari ebook...">
+                <input type="text" id="searchInput" placeholder="Cari ebook...">
                 <button type="submit">Cari</button>
             </form>
 
@@ -29,7 +81,6 @@
 
     <!-- Hero -->
     <section class="hero">
-
         <div class="container">
 
             <h1>Download Ribuan Ebook Gratis</h1>
@@ -40,89 +91,67 @@
             </p>
 
         </div>
-
     </section>
 
     <!-- Kategori -->
-
     <section class="category">
+        <div class="container">
 
-    <div class="container">
+            <h2>Kategori</h2>
 
-        <h2>Kategori</h2>
-
-        <div class="category-list">
-
-            <button class="category-btn" data-category="Semua">Semua</button>
-
-            <button class="category-btn" data-category="Programming">Programming</button>
-
-            <button class="category-btn" data-category="Bisnis">Bisnis</button>
-
-            <button class="category-btn" data-category="AI">AI</button>
-
-            <button class="category-btn" data-category="Canva">Canva</button>
-
-            <button class="category-btn" data-category="Desain">Desain</button>
-
-            <button class="category-btn" data-category="Marketing">Marketing</button>
+            <div class="category-list">
+                <button class="category-btn" data-category="Semua">Semua</button>
+                <button class="category-btn" data-category="Programming">Programming</button>
+                <button class="category-btn" data-category="Bisnis">Bisnis</button>
+                <button class="category-btn" data-category="AI">AI</button>
+                <button class="category-btn" data-category="Canva">Canva</button>
+                <button class="category-btn" data-category="Desain">Desain</button>
+                <button class="category-btn" data-category="Marketing">Marketing</button>
+            </div>
 
         </div>
-
-    </div>
-
-</section>
+    </section>
 
     <!-- Ebook -->
-
     <section class="ebooks">
-
         <div class="container">
 
             <h2>Ebook Terbaru</h2>
 
-            <div class="ebook-grid" id="ebookGrid" >
+            <div class="ebook-grid" id="ebookGrid"></div>
 
         </div>
-
     </section>
 
     <!-- Footer -->
-
     <footer>
-
         <div class="container">
-
-            <p>
-                © 2026 EbookHub. All Rights Reserved.
-            </p>
-
+            <p>© 2026 EbookHub. All Rights Reserved.</p>
         </div>
-
     </footer>
-    
-    <button id="scrollTopBtn" class="scroll-top-btn">
-    ↑
-    </button>
-    
-    <div id="downloadPopup" class="download-popup">
-    <img id="popupImage" src="" alt="">
-    <div class="popup-content">
-        <strong id="popupName"></strong>
-        <p id="popupText"></p>
-    </div>
-</div>
-    
-<script src="assets/js/data.js"></script>
-<script src="assets/js/utils.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/search.js"></script>
-<script src="assets/js/category.js"></script>
-<script src="assets/js/scroll.js"></script>
-<script src="assets/js/popup.js"></script>
 
-<button id="scrollTopBtn" class="scroll-top-btn">
-    ↑
+    <!-- Scroll Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        ↑
+    </button>
+
+    <!-- Popup -->
+    <div id="downloadPopup" class="download-popup">
+        <img id="popupImage" src="" alt="">
+        <div class="popup-content">
+            <strong id="popupName"></strong>
+            <p id="popupText"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/category.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/popup.js"></script>
 
 </body>
-</html>
+                </html>
