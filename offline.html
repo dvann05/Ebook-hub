@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Offline | EbookHub</title>
+
+<meta name="description" content="Anda sedang offline. Silakan periksa koneksi internet dan coba lagi.">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="favicon.ico">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+}
+
+.offline-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.offline-box{
+    max-width:600px;
+    background:#fff;
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.offline-box h1{
+    font-size:70px;
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.offline-box h2{
+    margin-bottom:15px;
+}
+
+.offline-box p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.retry-btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.retry-btn:hover{
+    background:#1d4ed8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="offline-page">
+
+    <div class="offline-box">
+
+        <h1>📶</h1>
+
+        <h2>Anda Sedang Offline</h2>
+
+        <p>
+            EbookHub tidak dapat terhubung ke internet.
+            Periksa koneksi Anda, lalu coba muat ulang halaman.
+        </p>
+
+        <a href="index.html" class="retry-btn">
+            Kembali ke Beranda
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+window.addEventListener("online",()=>{
+
+    location.reload();
+
+});
+
+</script>
+
+</body>
+</html>
