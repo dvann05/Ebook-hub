@@ -17,6 +17,7 @@ body{
     background:#f5f7fb;
     color:#222;
     line-height:1.6;
+    padding-top:120px;
 }
 
 body{
@@ -73,6 +74,11 @@ input{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    width:100%;
+}
+
+.search-box{
+    display:flex;
     width:100%;
 }
 /* ==========================================
