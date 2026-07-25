@@ -45,7 +45,7 @@ const ebooks = [
     format:"PDF",
     rating:4.7,
     downloads:7400,
-    image:"assets/images/ebook/php.jpg",
+    image:"assets/images/ebook/php.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/php.pdf",
     description:"Belajar PHP dari dasar sampai membuat website dinamis."
