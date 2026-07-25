@@ -130,7 +130,7 @@ const ebooks = [
     format:"PDF",
     rating:4.8,
     downloads:3900,
-    image:"assets/images/ebook/desain.jpg",
+    image:"assets/images/ebook/desain.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/desain.pdf",
     description:"Belajar prinsip desain grafis dari dasar."
@@ -147,7 +147,7 @@ const ebooks = [
     format:"PDF",
     rating:4.9,
     downloads:6100,
-    image:"assets/images/ebook/marketing.jpg",
+    image:"assets/images/ebook/marketing.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/marketing.pdf",
     description:"Strategi digital marketing untuk meningkatkan penjualan."
