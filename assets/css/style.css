@@ -63,13 +63,15 @@ input{
 }
 
 .header .container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px 0;
+    display:block;
 }
 
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
 /* ==========================================
    LOGO
 ========================================== */
