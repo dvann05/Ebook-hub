@@ -923,18 +923,17 @@ POP UP
 
 .sidebar{
     position:fixed;
-    top:120px;
+    top:0;
     right:-300px;
     width:280px;
-    height:calc(100vh - 120px);
+    height:100vh;
     background:#fff;
     box-shadow:-5px 0 20px rgba(0,0,0,.15);
     transition:.35s;
     z-index:10001;
-    padding:25px;
+    padding:160px 25px 25px;
     overflow-y:auto;
 }
-
 .sidebar.active{
     right:0;
 }
