@@ -25,3 +25,28 @@ function closeSidebar(){
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
 }
+
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+
+    e.preventDefault();
+
+    deferredPrompt = e;
+
+    installBtn.hidden = false;
+
+});
+
+installBtn.addEventListener("click", async () => {
+
+    installBtn.hidden = true;
+
+    deferredPrompt.prompt();
+
+    const choice = await deferredPrompt.userChoice;
+
+    deferredPrompt = null;
+
+});
