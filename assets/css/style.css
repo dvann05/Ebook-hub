@@ -2488,3 +2488,253 @@ img,
     transition:all .3s ease;
 
 }
+
+/* ===========================================================
+   LOGIN MODAL
+=========================================================== */
+
+.login-modal{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(15,23,42,.55);
+    backdrop-filter:blur(10px);
+
+    z-index:20000;
+
+    animation:loginFade .35s ease;
+
+}
+
+.login-box{
+
+    width:100%;
+    max-width:420px;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:38px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.18);
+
+    animation:loginScale .35s ease;
+
+}
+
+.login-logo{
+
+    width:90px;
+    height:90px;
+
+    margin:0 auto 20px;
+
+    object-fit:contain;
+
+}
+
+.login-box h2{
+
+    margin-bottom:10px;
+
+    font-size:30px;
+
+    color:#111827;
+
+}
+
+.login-box p{
+
+    margin-bottom:28px;
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+}
+
+#nameInput{
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 18px;
+
+    border:2px solid #e5e7eb;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    transition:.25s;
+
+    background:#f9fafb;
+
+}
+
+#nameInput:focus{
+
+    border-color:#2563eb;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 0 0 5px rgba(37,99,235,.15);
+
+}
+
+#loginBtn{
+
+    width:100%;
+
+    height:56px;
+
+    margin-top:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#loginBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 28px rgba(37,99,235,.35);
+
+}
+
+#loginBtn:active{
+
+    transform:scale(.98);
+
+}
+
+#loginError{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#ef4444;
+
+    font-size:14px;
+
+    min-height:20px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .login-box{
+
+        padding:30px 22px;
+
+        border-radius:22px;
+
+    }
+
+    .login-logo{
+
+        width:72px;
+        height:72px;
+
+    }
+
+    .login-box h2{
+
+        font-size:26px;
+
+    }
+
+    #nameInput{
+
+        height:52px;
+
+        font-size:15px;
+
+    }
+
+    #loginBtn{
+
+        height:52px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes loginFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes loginScale{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
