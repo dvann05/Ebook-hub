@@ -1,76 +1,186 @@
+/* ===========================================================
+   EbookHub - app.js
+   =========================================================== */
+
+/* ===========================
+   RENDER EBOOK
+=========================== */
+
 const grid = document.getElementById("ebookGrid");
 
-let html = "";
+if (grid && typeof ebooks !== "undefined") {
 
-ebooks.forEach(ebook => {
-    html += createEbookCard(ebook);
-});
+    grid.innerHTML = ebooks
+        .map(ebook => createEbookCard(ebook))
+        .join("");
 
-grid.innerHTML = html;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
 
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
 const closeMenu = document.getElementById("closeMenu");
 
-menuToggle.addEventListener("click", () => {
-    sidebar.classList.add("active");
-    overlay.classList.add("active");
-});
+function openSidebar() {
 
-closeMenu.addEventListener("click", closeSidebar);
-overlay.addEventListener("click", closeSidebar);
+    sidebar?.classList.add("active");
+    overlay?.classList.add("active");
 
-function closeSidebar(){
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
 }
+
+function closeSidebar() {
+
+    sidebar?.classList.remove("active");
+    overlay?.classList.remove("active");
+
+}
+
+menuToggle?.addEventListener("click", openSidebar);
+
+closeMenu?.addEventListener("click", closeSidebar);
+
+overlay?.addEventListener("click", closeSidebar);
 
 /* ===========================
    USER PROFILE
 =========================== */
 
-const nama = localStorage.getItem("ebookhub_username");
-
-const greeting = document.getElementById("greeting");
 const userName = document.getElementById("userName");
+const greeting = document.getElementById("greeting");
 const avatar = document.getElementById("userAvatar");
+
+const nama = localStorage.getItem("ebookhub_username");
 
 if (nama) {
 
-    userName.textContent = nama;
+    if (userName) {
 
-    avatar.textContent =
-        nama.charAt(0).toUpperCase();
-
-    const jam = new Date().getHours();
-
-    let sapaan = "Selamat Datang";
-
-    if (jam >= 5 && jam < 11) {
-
-        sapaan = "☀️ Selamat Pagi";
+        userName.textContent = nama;
 
     }
 
-    else if (jam >= 11 && jam < 15) {
+    if (avatar) {
 
-        sapaan = "🌤️ Selamat Siang";
-
-    }
-
-    else if (jam >= 15 && jam < 18) {
-
-        sapaan = "🌇 Selamat Sore";
+        avatar.textContent = nama.charAt(0).toUpperCase();
 
     }
 
-    else {
+    if (greeting) {
 
-        sapaan = "🌙 Selamat Malam";
+        const jam = new Date().getHours();
+
+        let sapaan = "👋 Selamat Datang";
+
+        if (jam >= 5 && jam < 11) {
+
+            sapaan = "☀️ Selamat Pagi";
+
+        } else if (jam >= 11 && jam < 15) {
+
+            sapaan = "🌤️ Selamat Siang";
+
+        } else if (jam >= 15 && jam < 18) {
+
+            sapaan = "🌇 Selamat Sore";
+
+        } else {
+
+            sapaan = "🌙 Selamat Malam";
+
+        }
+
+        greeting.textContent = sapaan;
 
     }
-
-    greeting.textContent = sapaan;
 
 }
+
+/* ===========================
+   SCROLL TO TOP
+=========================== */
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (!scrollTopBtn) return;
+
+    if (window.scrollY > 300) {
+
+        scrollTopBtn.classList.add("show");
+
+    } else {
+
+        scrollTopBtn.classList.remove("show");
+
+    }
+
+});
+
+scrollTopBtn?.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+/* ===========================
+   ACTIVE CATEGORY
+=========================== */
+
+const categoryButtons = document.querySelectorAll(".category-btn");
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        categoryButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+    });
+
+});
+
+/* ===========================
+   FADE ANIMATION
+=========================== */
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+fadeElements.forEach(element => {
+
+    observer.observe(element);
+
+});
