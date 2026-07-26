@@ -1638,31 +1638,30 @@ section{
 
     position:fixed;
 
-    right:20px;
+    right:18px;
+    bottom:18px;
 
-    bottom:20px;
-
-    width:320px;
+    width:250px;
 
     background:#ffffff;
 
-    border-radius:18px;
+    border-radius:14px;
 
-    padding:14px;
+    padding:10px;
 
     display:flex;
 
-    gap:14px;
-
     align-items:center;
 
-    box-shadow:var(--shadow-lg);
+    gap:10px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
     opacity:0;
 
     visibility:hidden;
 
-    transform:translateY(30px);
+    transform:translateX(100px);
 
     transition:.35s ease;
 
@@ -1676,19 +1675,21 @@ section{
 
     visibility:visible;
 
-    transform:translateY(0);
+    transform:translateX(0);
 
 }
 
 .download-popup img{
 
-    width:60px;
+    width:48px;
 
-    height:80px;
+    height:64px;
+
+    border-radius:8px;
 
     object-fit:cover;
 
-    border-radius:10px;
+    flex-shrink:0;
 
 }
 
@@ -1696,27 +1697,38 @@ section{
 
     flex:1;
 
+    overflow:hidden;
+
 }
 
 .popup-content strong{
 
     display:block;
 
-    font-size:15px;
+    font-size:13px;
 
     color:var(--text);
 
-    margin-bottom:6px;
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    margin-bottom:4px;
 
 }
 
 .popup-content p{
 
-    font-size:13px;
+    font-size:11px;
 
     color:var(--text-light);
 
+    line-height:1.4;
+
 }
+
 
 /* ===========================
    SCROLL TO TOP
@@ -1786,33 +1798,37 @@ section{
 
 @media (max-width:768px){
 
-    .sidebar{
-
-        width:280px;
-
-    }
-
     .download-popup{
+
+        width:230px;
 
         right:12px;
 
-        left:12px;
+        bottom:12px;
 
-        width:auto;
+        left:auto;
+
+        padding:8px;
 
     }
 
-    .scroll-top-btn{
+    .download-popup img{
 
-        width:48px;
+        width:42px;
 
-        height:48px;
+        height:56px;
 
-        font-size:20px;
+    }
 
-        right:16px;
+    .popup-content strong{
 
-        bottom:16px;
+        font-size:12px;
+
+    }
+
+    .popup-content p{
+
+        font-size:10px;
 
     }
 
