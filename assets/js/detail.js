@@ -1,106 +1,140 @@
+/* ===========================================================
+   EbookHub - detail.js
+   =========================================================== */
+
+/* ===========================
+   GET EBOOK
+=========================== */
+
 const params = new URLSearchParams(window.location.search);
 
-const id = Number(params.get("id"));
+const id = params.get("id");
 
 const ebook = getEbookById(id);
 
-if(ebook){
+/* ===========================
+   SHOW DETAIL
+=========================== */
 
-document.getElementById("ebookImage").src = ebook.image;
-document.getElementById("ebookImage").alt = ebook.title;
+if (ebook) {
 
-document.getElementById("ebookTitle").textContent = ebook.title;
+    document.title = `${ebook.title} | EbookHub`;
 
-document.getElementById("ebookRating").textContent =
-"⭐ " + ebook.rating;
+    document.getElementById("ebookImage").src = ebook.image;
+    document.getElementById("ebookImage").alt = ebook.title;
 
-document.getElementById("ebookDownloads").textContent =
-"📥 " + ebook.downloads.toLocaleString();
+    document.getElementById("ebookBanner").src = ebook.banner || ebook.image;
 
-document.getElementById("ebookFormat").textContent =
-"📄 " + ebook.format;
+    document.getElementById("ebookTitle").textContent = ebook.title;
 
-document.getElementById("ebookCategory").textContent =
-ebook.category;
+    document.getElementById("ebookDescription").textContent =
+        ebook.description;
 
-document.getElementById("ebookAuthor").textContent =
-ebook.author;
+    document.getElementById("ebookRating").textContent =
+        "⭐ " + Number(ebook.rating).toFixed(1);
 
-document.getElementById("ebookSize").textContent =
-ebook.size;
+    document.getElementById("ebookDownloads").textContent =
+        "📥 " + formatDownloads(ebook.downloads);
 
-document.getElementById("ebookPages").textContent =
-ebook.pages;
+    document.getElementById("ebookFormat").textContent =
+        "📄 " + ebook.format;
 
-document.getElementById("ebookLanguage").textContent =
-ebook.language;
+    document.getElementById("ebookCategory").textContent =
+        ebook.category;
 
-document.getElementById("ebookDescription").textContent =
-ebook.description;
+    document.getElementById("ebookAuthor").textContent =
+        ebook.author;
 
-document.getElementById("ebookBanner").src =
-ebook.banner;
+    document.getElementById("ebookSize").textContent =
+        ebook.size;
 
-document.getElementById("downloadBtn").href =
-"download.html?id=" + ebook.id;
+    document.getElementById("ebookPages").textContent =
+        ebook.pages;
+
+    document.getElementById("ebookLanguage").textContent =
+        ebook.language;
+
+    document.getElementById("downloadBtn").href =
+        `download.html?id=${ebook.id}`;
+
+} else {
+
+    document.querySelector("main").innerHTML = `
+
+        <section class="detail">
+
+            <div class="container">
+
+                <h1>Ebook Tidak Ditemukan</h1>
+
+                <p>
+
+                    Ebook yang Anda cari tidak tersedia
+                    atau telah dihapus.
+
+                </p>
+
+                <a
+                    href="index.html"
+                    class="hero-btn"
+                >
+
+                    Kembali ke Beranda
+
+                </a>
+
+            </div>
+
+        </section>
+
+    `;
 
 }
 
+/* ===========================
+   RELATED EBOOK
+=========================== */
+
 const related = document.getElementById("relatedBooks");
 
-let relatedHTML = "";
+if (ebook && related) {
 
-ebooks.forEach(book => {
+    related.innerHTML = ebooks
 
-    if (book.id !== ebook.id) {
+        .filter(book => book.id != ebook.id)
 
-        relatedHTML += `
-        <div class="ebook-card">
-            <img src="${book.image}" alt="${book.title}">
-            <h3>${book.title}</h3>
-            <p>${book.category}</p>
+        .slice(0, 4)
 
-            <div class="ebook-info">
-                <span>⭐ ${book.rating}</span>
-                <span>📥 ${book.downloads.toLocaleString()}</span>
-            </div>
+        .map(book => createEbookCard(book))
 
-            <a href="detail.html?id=${book.id}" class="detail-btn">
-                Lihat Detail
-            </a>
-        </div>
-        `;
-    }
+        .join("");
 
-});
+}
 
-related.innerHTML = relatedHTML;
+/* ===========================
+   DOWNLOAD GUIDE
+=========================== */
 
-function showGuide(){
+function showGuide() {
 
-    alert(
-`📚 CARA DOWNLOAD EBOOK
+    alert(`📚 CARA DOWNLOAD EBOOK
 
-Halo! Ikuti langkah-langkah berikut agar proses download berhasil.
+1. Klik tombol "Download Ebook".
+
+2. Tunggu halaman download terbuka.
+
+3. Ikuti petunjuk yang muncul.
+
+4. Setelah proses selesai,
+   file akan mulai diunduh.
 
 ━━━━━━━━━━━━━━━━━━━━
 
-1️⃣ Klik tombol "Download Ebook".
+💙 Iklan yang muncul membantu
+kami menjaga EbookHub tetap
+gratis untuk semua pengguna.
 
-2️⃣ Kamu akan diarahkan ke halaman selanjutnya.
-
-3️⃣ Tunggu beberapa saat,lalu akan menuju halaman sponsor Anda hanya menekan kembal
-
-4️⃣ Setelah kembali, klik tombol download jika diperlukan dan ebook akan mulai diunduh.
-
-━━━━━━━━━━━━━━━━━━━━
-
-💙 Kenapa ada halaman sponsor?
-
-Iklan membantu kami membagikan ebook gratis dan menjaga website tetap aktif tanpa biaya untuk pengunjung.
-
-🙏 Terima kasih atas dukunganmu.
-Selamat membaca dan semoga bermanfaat! 📖`
-    );
+Terima kasih atas dukunganmu.
+Selamat membaca! 📖`);
 
 }
