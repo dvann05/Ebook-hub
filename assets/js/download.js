@@ -68,10 +68,8 @@ if (ebook) {
 
                     if (ebook.drive) {
 
-                        window.open(
-                            ebook.drive,
-                            "_blank"
-                        );
+                        window.location.href = ebook.drive;
+                        
 
                     } else {
 
