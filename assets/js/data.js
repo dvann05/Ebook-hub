@@ -32,7 +32,7 @@ drive:"",
     image:"assets/images/ebook/javascript.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/javascript.pdf",
-Drive:"",
+drive:"",
     description:"Panduan lengkap JavaScript mulai dari variabel hingga DOM dan Fetch API."
 },
 
