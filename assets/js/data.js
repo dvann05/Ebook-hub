@@ -122,7 +122,7 @@ drive:"",
     image:"assets/images/ebook/canva.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/canva.pdf",
-drive:"",
+drive:"https://drive.google.com/drive/folders/1jh3dmU--Ou3MBulGsMfpvPnxCETumHdV?usp=drive_link",
     description:"Panduan lengkap desain menggunakan Canva."
 },
 
