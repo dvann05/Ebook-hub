@@ -32,7 +32,7 @@ drive:"",
     image:"assets/images/ebook/javascript.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/javascript.pdf",
-Drive" ",
+Drive:"",
     description:"Panduan lengkap JavaScript mulai dari variabel hingga DOM dan Fetch API."
 },
 
@@ -86,7 +86,7 @@ drive:"",
     image:"assets/images/ebook/bisnis.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/bisnis.pdf",
-drive:" ",
+drive:"",
     description:"Panduan membangun bisnis digital dari nol."
 },
 
@@ -122,7 +122,7 @@ drive:"",
     image:"assets/images/ebook/canva.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/canva.pdf",
-drive:" ",
+drive:"",
     description:"Panduan lengkap desain menggunakan Canva."
 },
 
