@@ -196,7 +196,7 @@ drive:"https://drive.google.com/drive/folders/1KR0Vj2XOKxzdTyh2BlDx_bg5ktpJv2oo"
     
 {
     id:11,
-    title:"Premiere Pro Templates & Effects – Koleksi Template Video Profesional untuk Editor",
+    title:"Premiere Pro Templates & Effects",
     category:"Desain",
     author:"EbookHub",
     language:"Indonesia",
