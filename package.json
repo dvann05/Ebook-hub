@@ -1,0 +1,8 @@
+{
+  "name": "ebookhub",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate-sitemap": "node scripts/generate-sitemap.js"
+  }
+}
