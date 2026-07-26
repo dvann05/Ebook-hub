@@ -14,6 +14,7 @@ const ebooks = [
     image:"assets/images/ebook/html.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/html-css.pdf",
+drive:
     description:"Panduan lengkap belajar HTML dan CSS dari dasar hingga mahir. Pelajari struktur HTML, elemen, form, tabel, CSS Selector, Flexbox, Grid, Responsive Design, serta membangun website modern melalui latihan dan project step-by-step yang mudah dipahami, cocok untuk pemula tanpa pengalaman coding."
 },
 
@@ -48,6 +49,7 @@ const ebooks = [
     image:"assets/images/ebook/php.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/php.pdf",
+drive:
     description:"Belajar PHP dari dasar sampai membuat website dinamis."
 },
 
@@ -65,6 +67,7 @@ const ebooks = [
     image:"assets/images/ebook/mysql.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/mysql.pdf",
+drive:
     description:"Panduan lengkap membuat dan mengelola database MySQL."
 },
 
@@ -82,6 +85,7 @@ const ebooks = [
     image:"assets/images/ebook/bisnis.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/bisnis.pdf",
+drive:
     description:"Panduan membangun bisnis digital dari nol."
 },
 
@@ -99,6 +103,7 @@ const ebooks = [
     image:"assets/images/ebook/ai.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/ai.pdf",
+drive:
     description:"Belajar memanfaatkan AI untuk produktivitas dan bisnis."
 },
 
@@ -116,6 +121,7 @@ const ebooks = [
     image:"assets/images/ebook/canva.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/canva.pdf",
+drive:
     description:"Panduan lengkap desain menggunakan Canva."
 },
 
@@ -133,6 +139,7 @@ const ebooks = [
     image:"assets/images/ebook/desain.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/desain.pdf",
+drive:
     description:"Belajar prinsip desain grafis dari dasar."
 },
 
@@ -150,6 +157,7 @@ const ebooks = [
     image:"assets/images/ebook/marketing.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/marketing.pdf",
+drive:
     description:"Strategi digital marketing untuk meningkatkan penjualan."
 },
 
@@ -179,6 +187,7 @@ const ebooks = [
     banner: "assets/images/banner/worksheet-anak.webp",
 
     file: "downloads/70-worksheet-anak.pdf",
+drive:
 
     description: "Kumpulan lebih dari 70 worksheet belajar bahasa Inggris untuk anak usia PAUD, TK, dan SD. Berisi latihan alfabet, vocabulary, tracing, matching, coloring, grammar dasar, reading, writing, dan aktivitas belajar yang menyenangkan."
 }
