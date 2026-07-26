@@ -191,6 +191,25 @@ drive:"https://drive.google.com/drive/folders/11c5i2DHEvixo04uGrVAnT_dPqawN47RI"
 drive:"https://drive.google.com/drive/folders/1KR0Vj2XOKxzdTyh2BlDx_bg5ktpJv2oo",
 
     description: "Kumpulan lebih dari 70 worksheet belajar bahasa Inggris untuk anak usia PAUD, TK, dan SD. Berisi latihan alfabet, vocabulary, tracing, matching, coloring, grammar dasar, reading, writing, dan aktivitas belajar yang menyenangkan."
+},
+
+    
+{
+    id:11,
+    title:"Premiere Pro Templates & Effects – Koleksi Template Video Profesional untuk Editor",
+    category:"Desain",
+    author:"EbookHub",
+    language:"Indonesia",
+    pages:1000,
+    size:"3Gb+",
+    format:"Template & Effects",
+    rating:4.9,
+    downloads:12540,
+    image:"assets/images/ebook/premiere.webp",
+    banner:"assets/images/banner/banner.jpg",
+    file:"",
+drive:"https://drive.google.com/drive/folders/18ZK-rtIl7F3NExEotF8oPLct_qvad9V0",
+    description:"Koleksi Premiere Pro Templates & Effects premium untuk mempercepat proses editing video. Berisi template intro, outro, transition, title, motion graphics, slideshow, dan efek profesional yang siap pakai untuk berbagai kebutuhan konten."
 }
 
 ]; 
