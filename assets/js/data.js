@@ -158,7 +158,7 @@ drive:"",
     image:"assets/images/ebook/marketing.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"downloads/marketing.pdf",
-drive:"",
+drive:"https://drive.google.com/drive/folders/11c5i2DHEvixo04uGrVAnT_dPqawN47RI",
     description:"Strategi digital marketing untuk meningkatkan penjualan."
 },
 
