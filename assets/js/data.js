@@ -187,7 +187,7 @@ drive:
     banner: "assets/images/banner/worksheet-anak.webp",
 
     file: "downloads/70-worksheet-anak.pdf",
-drive:
+drive:"https://drive.google.com/drive/folders/1KR0Vj2XOKxzdTyh2BlDx_bg5ktpJv2oo"
 
     description: "Kumpulan lebih dari 70 worksheet belajar bahasa Inggris untuk anak usia PAUD, TK, dan SD. Berisi latihan alfabet, vocabulary, tracing, matching, coloring, grammar dasar, reading, writing, dan aktivitas belajar yang menyenangkan."
 }
