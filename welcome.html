@@ -1,77 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Welcome | EbookHub</title>
+    <title>Selamat Datang | EbookHub</title>
 
-<link rel="stylesheet" href="assets/css/welcome.css">
+    <meta name="description" content="Selamat datang di EbookHub. Temukan ribuan ebook berkualitas untuk belajar dan mengembangkan diri.">
+
+    <link rel="stylesheet" href="assets/css/welcome.css">
 
 </head>
 
 <body>
 
-<div class="background">
+    <!-- Background -->
+    <div class="background">
 
-<div class="circle circle1"></div>
-<div class="circle circle2"></div>
-<div class="circle circle3"></div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
 
-</div>
+    </div>
 
-<main class="welcome">
+    <!-- Welcome Card -->
+    <main class="welcome">
 
-<div class="card">
+        <section class="card">
 
-<img
-src="assets/images/logo/logo.webp"
-class="logo"
-alt="EbookHub">
+            <img
+                src="assets/images/logo/logo.webp"
+                class="logo"
+                alt="Logo EbookHub">
 
-<h1>EbookHub</h1>
+            <h1>EbookHub</h1>
 
-<p class="subtitle">
+            <h2>Selamat Datang 👋</h2>
 
-Discover thousands of ebooks and grow your knowledge.
+            <p class="subtitle">
+                Temukan ribuan ebook berkualitas untuk belajar,
+                meningkatkan keterampilan, dan mengembangkan wawasan Anda.
+            </p>
 
-</p>
+            <div class="quote" id="quote">
+                "Semakin banyak membaca, semakin luas pengetahuan."
+            </div>
 
-<div class="quote" id="quote">
+            <div class="input-group">
 
-"The more you read, the more you grow."
+                <label for="username">
+                    Siapa nama Anda?
+                </label>
 
-</div>
+                <input
+                    type="text"
+                    id="username"
+                    maxlength="30"
+                    autocomplete="off"
+                    placeholder="Masukkan nama Anda">
 
-<div class="input-group">
+            </div>
 
-<input
-type="text"
-id="username"
-maxlength="30"
-placeholder="Enter your name">
+            <button id="continueBtn">
 
-</div>
+                Lanjutkan →
 
-<button id="continueBtn">
+            </button>
 
-Continue →
+            <p class="small">
 
-</button>
+                Tidak perlu membuat akun.<br>
+                Nama Anda hanya disimpan di perangkat ini.
 
-<p class="small">
+            </p>
 
-No account required.<br>
-Your name stays only on this device.
+        </section>
 
-</p>
+    </main>
 
-</div>
-
-</main>
-
-<script src="assets/js/welcome.js"></script>
+    <script src="assets/js/welcome.js"></script>
 
 </body>
+
 </html>
