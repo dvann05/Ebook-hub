@@ -264,3 +264,9 @@ fadeElements.forEach(element => {
     observer.observe(element);
 
 });
+
+/* ===========================
+   START APP
+=========================== */
+
+renderBooks();
