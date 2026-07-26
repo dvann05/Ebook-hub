@@ -2,6 +2,7 @@
    LOGIN EBOOKHUB
 ========================================== */
 
+console.log("login.js berhasil dimuat");
 const loginModal = document.getElementById("loginModal");
 const nameInput = document.getElementById("nameInput");
 const loginBtn = document.getElementById("loginBtn");
