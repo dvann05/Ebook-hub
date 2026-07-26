@@ -45,6 +45,79 @@ function renderBooks() {
 
 }
 
+function renderPagination() {
+
+    pagination.innerHTML = "";
+
+    if (totalPages <= 1) return;
+
+    // PREV
+    const prev = document.createElement("button");
+
+    prev.textContent = "←";
+
+    prev.disabled = currentPage === 1;
+
+    prev.onclick = () => {
+
+        changePage(currentPage - 1);
+
+    };
+
+    pagination.appendChild(prev);
+
+    // NOMOR HALAMAN
+    for (let i = 1; i <= totalPages; i++) {
+
+        const btn = document.createElement("button");
+
+        btn.textContent = i;
+
+        if (i === currentPage) {
+
+            btn.classList.add("active");
+
+        }
+
+        btn.onclick = () => {
+
+            changePage(i);
+
+        };
+
+        pagination.appendChild(btn);
+
+    }
+
+    // NEXT
+    const next = document.createElement("button");
+
+    next.textContent = "→";
+
+    next.disabled = currentPage === totalPages;
+
+    next.onclick = () => {
+
+        changePage(currentPage + 1);
+
+    };
+
+    pagination.appendChild(next);
+
+}
+
+function changePage(page) {
+
+    if (page < 1 || page > totalPages) return;
+
+    const url = new URL(window.location);
+
+    url.searchParams.set("page", page);
+
+    window.location.href = url.toString();
+
+}
+
 /* ===========================
    SIDEBAR
 =========================== */
