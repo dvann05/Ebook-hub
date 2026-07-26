@@ -1,44 +1,142 @@
-function formatDownloads(downloads){
+/* ===========================================================
+   EbookHub - utils.js
+   =========================================================== */
 
-    if(downloads >= 1000000){
+/* ===========================
+   FORMAT DOWNLOAD
+=========================== */
+
+function formatDownloads(downloads) {
+
+    if (downloads >= 1000000) {
+
         return (downloads / 1000000).toFixed(1) + " Juta";
+
     }
 
-    if(downloads >= 1000){
+    if (downloads >= 1000) {
+
         return (downloads / 1000).toFixed(1) + " Ribu";
+
     }
 
     return downloads.toString();
 
 }
 
-function createEbookCard(ebook){
+/* ===========================
+   FORMAT RATING
+=========================== */
+
+function formatRating(rating) {
+
+    return Number(rating).toFixed(1);
+
+}
+
+/* ===========================
+   CREATE EBOOK CARD
+=========================== */
+
+function createEbookCard(ebook) {
 
     return `
-    <div class="ebook-card">
 
-        <img src="${ebook.image}" alt="${ebook.title}">
+    <article class="ebook-card fade-in">
 
-        <h3>${ebook.title}</h3>
+        <div class="ebook-cover">
 
-        <p>${ebook.category}</p>
+            <img
+                src="${ebook.image}"
+                alt="${ebook.title}"
+                loading="lazy"
+            >
 
-        <div class="ebook-info">
-            <span>⭐ ${ebook.rating}</span>
-            <span>📥 ${formatDownloads(ebook.downloads)}</span>
+            <span class="category-badge">
+
+                ${ebook.category}
+
+            </span>
+
         </div>
 
-        <a href="detail.html?id=${ebook.id}" class="detail-btn">
-            Lihat Detail
-        </a>
+        <div class="ebook-body">
 
-    </div>
+            <h3>${ebook.title}</h3>
+
+            <p>${ebook.description || "Temukan ebook berkualitas untuk meningkatkan pengetahuan dan keterampilan Anda."}</p>
+
+            <div class="ebook-info">
+
+                <span>⭐ ${formatRating(ebook.rating)}</span>
+
+                <span>📥 ${formatDownloads(ebook.downloads)}</span>
+
+            </div>
+
+            <a
+                href="detail.html?id=${ebook.id}"
+                class="ebook-btn"
+            >
+                Lihat Detail
+            </a>
+
+        </div>
+
+    </article>
+
     `;
 
 }
 
-function getEbookById(id){
+/* ===========================
+   GET EBOOK BY ID
+=========================== */
 
-    return ebooks.find(ebook => ebook.id == id);
+function getEbookById(id) {
+
+    return ebooks.find(ebook => String(ebook.id) === String(id));
+
+}
+
+/* ===========================
+   GET EBOOKS BY CATEGORY
+=========================== */
+
+function getEbooksByCategory(category) {
+
+    if (!category || category === "Semua") {
+
+        return ebooks;
+
+    }
+
+    return ebooks.filter(ebook => ebook.category === category);
+
+}
+
+/* ===========================
+   SEARCH EBOOK
+=========================== */
+
+function searchEbooks(keyword) {
+
+    if (!keyword) {
+
+        return ebooks;
+
+    }
+
+    const search = keyword.toLowerCase();
+
+    return ebooks.filter(ebook =>
+
+        ebook.title.toLowerCase().includes(search) ||
+
+        ebook.category.toLowerCase().includes(search) ||
+
+        (ebook.description || "").toLowerCase().includes(search)
+
+    );
 
 }
