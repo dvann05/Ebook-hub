@@ -17,22 +17,19 @@ const btn = document.getElementById("downloadBtn");
 // Jika ebook ditemukan
 if (ebook) {
 
-    // Mengisi data
+    // Mengisi data ebook
     title.textContent = "Download " + ebook.title;
     fileTitle.textContent = ebook.title;
     fileFormat.textContent = ebook.format;
     fileSize.textContent = ebook.size;
     filePages.textContent = ebook.pages;
 
-    // Tombol download
-    btn.href = ebook.file;
-    btn.setAttribute("download", "");
-
-    // Countdown
-    let time = 10;
-
+    // Nonaktifkan tombol selama countdown
+    btn.href = "#";
     btn.classList.add("disabled");
     btn.style.pointerEvents = "none";
+
+    let time = 10;
 
     const timer = setInterval(() => {
 
@@ -48,37 +45,43 @@ if (ebook) {
             btn.classList.remove("disabled");
             btn.style.pointerEvents = "auto";
             btn.textContent = "📥 Download Sekarang";
+
             const status = document.getElementById("downloadStatus");
 
-status.innerHTML = "✅ Tombol download sudah aktif. Silakan klik tombol di bawah.";
-status.style.background = "#dcfce7";
-status.style.color = "#15803d";
-            btn.onclick = function(e){
+            status.innerHTML = "✅ Tombol download sudah aktif. Silakan klik tombol di bawah.";
+            status.style.background = "#dcfce7";
+            status.style.color = "#15803d";
 
-    e.preventDefault();
+            // Klik tombol → buka iklan lalu Google Drive
+            btn.onclick = function (e) {
 
-    window.open(
-        "https://www.effectivecpmnetwork.com/gfa8wechck?key=4f8c6d97bc83607cd1e976e49265de12",
-        "_blank"
-    );
+                e.preventDefault();
 
-    setTimeout(function(){
+                // Buka iklan
+                window.open(
+                    "https://www.effectivecpmnetwork.com/gfa8wechck?key=4f8c6d97bc83607cd1e976e49265de12",
+                    "_blank"
+                );
 
-        const link = document.createElement("a");
+                // Setelah 1 detik buka Google Drive ebook
+                setTimeout(function () {
 
-        link.href = ebook.file;
+                    if (ebook.drive) {
 
-        link.download = "";
+                        window.open(
+                            ebook.drive,
+                            "_blank"
+                        );
 
-        document.body.appendChild(link);
+                    } else {
 
-        link.click();
+                        alert("Link Google Drive untuk ebook ini belum tersedia.");
 
-        document.body.removeChild(link);
+                    }
 
-    },1000);
+                }, 1000);
 
-};
+            };
 
         }
 
