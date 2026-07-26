@@ -617,3 +617,346 @@ h2{
 
 /* MOBILE heading size */
 @media (max-width:768px){ h2{ font-size:20px; } footer .container{ padding:25px 0; } }
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,sans-serif;
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8,#60a5fa);
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:0;
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(30px);
+    opacity:.35;
+    animation:float 10s ease-in-out infinite;
+}
+
+.circle1{
+    width:280px;
+    height:280px;
+
+    background:#ffffff;
+
+    top:-80px;
+    left:-60px;
+}
+
+.circle2{
+    width:350px;
+    height:350px;
+
+    background:#93c5fd;
+
+    right:-120px;
+    top:40%;
+}
+
+.circle3{
+    width:220px;
+    height:220px;
+
+    background:#dbeafe;
+
+    bottom:-70px;
+    left:30%;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.welcome{
+    width:100%;
+    padding:24px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    z-index:10;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    width:100%;
+    max-width:460px;
+
+    padding:42px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.18);
+
+    text-align:center;
+
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    display:block;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.card h1{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+.card h2{
+
+    margin-top:10px;
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    font-weight:600;
+}
+
+.subtitle{
+
+    margin-top:18px;
+
+    color:rgba(255,255,255,.92);
+
+    line-height:1.7;
+
+    font-size:.95rem;
+}
+
+.quote{
+
+    margin-top:24px;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-style:italic;
+
+    font-size:.92rem;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+.input-group{
+
+    margin-top:28px;
+
+    text-align:left;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#fff;
+
+    font-weight:600;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.input-group input:focus{
+
+    box-shadow:
+    0 0 0 4px rgba(255,255,255,.25);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    margin-top:24px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:#1d4ed8;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+   FOOTER TEXT
+=========================== */
+
+.small{
+
+    margin-top:20px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:.82rem;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:480px){
+
+.card{
+
+padding:30px 24px;
+
+}
+
+.card h1{
+
+font-size:1.7rem;
+
+}
+
+.card h2{
+
+font-size:1.2rem;
+
+}
+
+.subtitle{
+
+font-size:.9rem;
+
+}
+
+}
