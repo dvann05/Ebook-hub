@@ -8,9 +8,9 @@ const nameInput = document.getElementById("nameInput");
 const loginBtn = document.getElementById("loginBtn");
 const loginError = document.getElementById("loginError");
 
-const userName = document.getElementById("userName");
-const userAvatar = document.getElementById("userAvatar");
-const greeting = document.getElementById("greeting");
+const loginUserName = document.getElementById("userName");
+const loginUserAvatar = document.getElementById("userAvatar");
+const loginGreeting = document.getElementById("greeting");
 
 /* ==========================================
    LOCAL STORAGE
@@ -54,24 +54,18 @@ function getGreeting(){
 
 function updateUser(name){
 
-    if(userName){
-
-        userName.textContent = name;
-
+    if(loginUserName){
+        loginUserName.textContent = name;
     }
 
-    if(userAvatar){
-
-        userAvatar.textContent =
+    if(loginUserAvatar){
+        loginUserAvatar.textContent =
             name.charAt(0).toUpperCase();
-
     }
 
-    if(greeting){
-
-        greeting.textContent =
+    if(loginGreeting){
+        loginGreeting.textContent =
             getGreeting();
-
     }
 
 }
