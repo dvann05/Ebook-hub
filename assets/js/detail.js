@@ -125,8 +125,7 @@ function showGuide() {
 
 3. Ikuti petunjuk yang muncul.
 
-4. Setelah proses selesai,
-   file akan mulai diunduh.
+4. Jika muncul iklan tekan kmbali.
 
 ━━━━━━━━━━━━━━━━━━━━
 
