@@ -1,6 +1,6 @@
 /* ===========================================================
    EbookHub - app.js
-   =========================================================== */
+=========================================================== */
 
 /* ===========================
    RENDER EBOOK
@@ -128,28 +128,6 @@ scrollTopBtn?.addEventListener("click", () => {
         top: 0,
 
         behavior: "smooth"
-
-    });
-
-});
-
-/* ===========================
-   ACTIVE CATEGORY
-=========================== */
-
-const categoryButtons = document.querySelectorAll(".category-btn");
-
-categoryButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        categoryButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
 
     });
 
