@@ -1,963 +1,343 @@
-/* ==========================================
-   RESET
-========================================== */
+/* ===========================================================
+   EbookHub
+   style.css
+   Part 1 - Root, Reset, Base, Typography & Container
+   =========================================================== */
+
+/* ===========================================================
+   ROOT VARIABLES
+   =========================================================== */
 
 :root{
-    --bg:#f5f7fb;
-    --text:#222;
-    --muted:#666;
+
+    /* Colors */
     --primary:#2563eb;
-    --primary-600:#1d4ed8;
-    --accent:#16a34a;
-    --accent-700:#15803d;
-    --card-shadow: rgba(0,0,0,.08);
-    --card-shadow-hover: rgba(0,0,0,.12);
-    --header-height:190px; /* adjust if header size changes */
+    --primary-dark:#1d4ed8;
+    --secondary:#16a34a;
+
+    --background:#f5f7fb;
+    --surface:#ffffff;
+
+    --text:#111827;
+    --text-light:#6b7280;
+
+    --border:#e5e7eb;
+
+    /* Shadow */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
+    --shadow-md:0 8px 20px rgba(0,0,0,.10);
+    --shadow-lg:0 12px 35px rgba(0,0,0,.15);
+
+    /* Radius */
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:18px;
+    --radius-xl:24px;
+
+    /* Header */
+
+    --header-height:160px;
+
+    /* Animation */
+
+    --transition:.3s ease;
+
 }
 
-*{
+/* ===========================================================
+   RESET
+   =========================================================== */
+
+*,
+*::before,
+*::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--bg);
+
+    font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:var(--background);
+
     color:var(--text);
+
     line-height:1.6;
+
+    overflow-x:hidden;
+
     padding-top:var(--header-height);
+
+}
+
+/* ===========================================================
+   TYPOGRAPHY
+   =========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--text);
+
+    font-weight:700;
+
+    line-height:1.3;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
 }
 
 a{
-    text-decoration:none;
+
     color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+ul,
+ol{
+
+    list-style:none;
+
 }
 
 img{
-    width:100%;
+
     display:block;
+
+    max-width:100%;
+
+    height:auto;
+
 }
 
 button{
-    cursor:pointer;
+
     border:none;
+
     outline:none;
-    background:transparent;
+
+    background:none;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
 }
 
-input{
+input,
+textarea{
+
+    font:inherit;
+
     outline:none;
+
 }
 
-/* Accessibility focus states */
+/* ===========================================================
+   ACCESSIBILITY
+   =========================================================== */
+
 :focus-visible{
-    outline:3px solid color-mix(in srgb, var(--primary) 50%, white);
-    outline-offset:2px;
+
+    outline:3px solid rgba(37,99,235,.35);
+
+    outline-offset:3px;
+
 }
 
-/* ==========================================
+/* ===========================================================
    CONTAINER
-========================================== */
+   =========================================================== */
 
 .container{
-    width:94%;
-    margin:auto;
+
+    width:min(1280px,94%);
+
+    margin-inline:auto;
+
 }
 
-/* ==========================================
-   HEADER
-========================================== */
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#fff;
-    z-index:9999;
-    box-shadow:0 2px 10px var(--card-shadow);
-}
-
-.header .container{
-    width:94%;
-    margin:auto;
-    display:block;
-    padding:12px 0;
-}
-
-.header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-}
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    width:220px;
-    height:auto;
-    max-width:100%;
-}
-
-/* ==========================================
-   SEARCH BOX
-========================================== */
-
-.search-box{
-    display:flex;
-    width:100%;
-    margin-top:15px;
-}
-
-.search-box input{
-    flex:1;
-    min-width:0;
-    padding:12px 15px;
-    border:1px solid #ddd;
-    border-right:none;
-    border-radius:8px 0 0 8px;
-    font-size:15px;
-}
-
-.search-box button{
-    padding:0 24px;
-    background:var(--primary);
-    color:#fff;
-    border-radius:0 8px 8px 0;
-    white-space:nowrap;
-}
-
-/* ==========================================
-   HERO
-========================================== */
-
-.hero{
-    background:linear-gradient(135deg,var(--primary),#1e40af);
-    color:#fff;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hero h1{
-    font-size:34px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:16px;
-    opacity:.95;
-    line-height:1.8;
-}
-
-/* ==========================================
-   RESPONSIVE HEADER
-========================================== */
-
-@media (max-width:768px){
-    .header-top{
-        margin-bottom:15px;
-    }
-
-    .logo img{
-        width:170px;
-    }
-
-    .menu-toggle{
-        font-size:34px;
-    }
-
-    .search-box{
-        width:100%;
-    }
-
-    .hero{
-        padding:45px 15px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-}
-
-/* ==========================================
-   CATEGORY
-========================================== */
-
-.category-list{
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    padding:5px 0;
-}
-
-.category-list::-webkit-scrollbar{
-    display:none;
-}
-
-.category-btn{
-    white-space:nowrap;
-    padding:10px 18px;
-    border-radius:999px;
-    border:1px solid var(--primary);
-    background:#fff;
-    color:var(--primary);
-    font-weight:600;
-}
-
-.category-btn:hover,
-.category-btn.active{
-    background:var(--primary);
-    color:#fff;
-}
-
-/* ==========================================
-   EBOOK
-========================================== */
-
-.ebooks{
-    padding:35px 0;
-}
-
-.ebooks h2{
-    font-size:24px;
-    margin-bottom:20px;
-}
-
-/* ==========================================
-   GRID
-========================================== */
-
-.ebook-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-}
-
-/* ==========================================
-   CARD
-========================================== */
-
-.ebook-card{
-    background:#ffffff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 3px 10px var(--card-shadow);
-    transition:transform .3s, box-shadow .3s;
-    animation:fadeUp .4s ease;
-}
-
-.ebook-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 20px var(--card-shadow-hover);
-}
-
-.ebook-card img{
-    width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-}
-
-/* ==========================================
-   CARD CONTENT
-========================================== */
-
-.ebook-card h3{
-    font-size:15px;
-    font-weight:700;
-    padding:10px 10px 4px;
-    line-height:1.4;
-    height:50px;
-    overflow:hidden;
-}
-
-.ebook-card p{
-    padding:0 10px;
-    font-size:12px;
-    color:var(--muted);
-}
-
-/* ==========================================
-   DOWNLOAD INFO
-========================================== */
-
-.ebook-info{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:8px 10px;
-    font-size:12px;
-    color:#777;
-}
-
-.ebook-info span{
-    display:flex;
-    align-items:center;
-    gap:4px;
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.ebook-card a,
-.guide-btn,
-.download-btn{
-    display:block;
-    margin:10px;
-    padding:10px 14px;
-    background:var(--primary);
-    color:#ffffff;
-    text-align:center;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:bold;
-    transition:background .3s, transform .15s;
-}
-
-.ebook-card a:hover,
-.guide-btn:hover{
-    background:var(--primary-600);
-}
-
-.guide-btn{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:600;
-}
-
-/* ==========================================
-   DESKTOP GRID ADJUST
-========================================== */
-
-@media (min-width:768px){
-    .ebook-grid{
-        grid-template-columns:repeat(4,1fr);
-    }
-}
-
-@media (min-width:1200px){
-    .ebook-grid{
-        grid-template-columns:repeat(5,1fr);
-    }
-}
-
-/* ==========================================
-   FOOTER
-========================================== */
-
-footer{
-    background:#111827;
-    color:#ffffff;
-    margin-top:50px;
-}
-
-footer .container{
-    padding:30px 0;
-    text-align:center;
-}
-
-footer p{
-    font-size:14px;
-    color:#d1d5db;
-}
-
-footer a{
-    color:#60a5fa;
-}
-
-footer a:hover{
-    text-decoration:underline;
-}
-
-/* ==========================================
+/* ===========================================================
    SECTION
-========================================== */
+   =========================================================== */
 
 section{
-    padding:40px 0;
+
+    padding:60px 0;
+
 }
 
-h2{
-    font-size:24px;
-    margin-bottom:20px;
-    color:#111827;
-}
-
-/* ==========================================
+/* ===========================================================
    UTILITIES
-========================================== */
+   =========================================================== */
 
-.text-center{ text-align:center; }
-.mt-10{ margin-top:10px; }
-.mt-20{ margin-top:20px; }
-.mt-30{ margin-top:30px; }
-.mb-10{ margin-bottom:10px; }
-.mb-20{ margin-bottom:20px; }
-.mb-30{ margin-bottom:30px; }
-
-/* ==========================================
-   SCROLLBAR
-========================================== */
-
-::-webkit-scrollbar{ width:8px; }
-::-webkit-scrollbar-track{ background:#f1f1f1; }
-::-webkit-scrollbar-thumb{ background:var(--primary); border-radius:20px; }
-::-webkit-scrollbar-thumb:hover{ background:var(--primary-600); }
-
-/* ==========================================
-   ANIMATION
-========================================== */
-
-@keyframes fadeUp{
-    from{ opacity:0; transform:translateY(20px); }
-    to{ opacity:1; transform:translateY(0); }
-}
-
-/* ==========================================
-   DETAIL EBOOK
-========================================== */
-
-.detail{
-    padding:40px 0;
-}
-
-.detail-box{
-    display:grid;
-    grid-template-columns:320px 1fr;
-    gap:30px;
-    background:#fff;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 5px 15px var(--card-shadow);
-}
-
-.detail-cover img{
-    width:100%;
-    border-radius:12px;
-    aspect-ratio:3/4;
-    object-fit:cover;
-}
-
-.detail-content h1{
-    font-size:30px;
-    margin-bottom:15px;
-    color:#111827;
-}
-
-/* META */
-.ebook-meta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-bottom:20px;
-}
-.ebook-meta span{
-    background:#eef4ff;
-    color:var(--primary);
-    padding:8px 14px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-}
-
-/* DESKRIPSI */
-.detail-content h3{ margin-bottom:10px; font-size:22px; }
-.detail-content p{ margin-bottom:12px; color:#555; line-height:1.8; }
-
-/* ADS (single definition)
-   keep class for ad placements */
-.ads{ margin:25px 0; }
-.ads img{ width:100%; border-radius:12px; display:block; }
-
-/* DOWNLOAD BUTTON & INFO */
-.download-btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    padding:14px 28px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:bold;
-    transition:.3s;
-    text-align:center;
-}
-.download-btn:hover{ background:var(--accent-700); transform:translateY(-2px); }
-.download-btn.disabled{ background:#9ca3af; cursor:not-allowed; }
-
-.download-info{
-    background:#eef6ff;
-    border-left:5px solid var(--primary);
-    padding:18px;
-    border-radius:12px;
-    margin:20px 0;
-}
-.download-info h3{ margin-bottom:10px; color:var(--primary); }
-.download-info ol{ margin-left:20px; }
-.download-info li{ margin:8px 0; line-height:1.6; }
-
-.download-status{
-    margin:15px 0;
-    padding:12px;
-    text-align:center;
-    background:#fff8e1;
-    color:#b45309;
-    border-radius:10px;
-    font-weight:600;
-}
-
-/* DETAIL RESPONSIVE */
-@media (max-width:768px){
-    .detail-box{ grid-template-columns:1fr; }
-    .detail-cover{ max-width:260px; margin:auto; }
-    .detail-content h1{ font-size:24px; }
-    .ebook-meta{ gap:8px; }
-    .ebook-meta span{ font-size:13px; padding:7px 12px; }
-    .download-btn{ display:block; width:100%; }
-}
-
-/* DOWNLOAD PAGE */
-.download-page{ padding:40px 0; }
-.download-box{
-    max-width:800px;
-    margin:auto;
-    background:#ffffff;
-    border-radius:16px;
-    padding:30px;
-    box-shadow:0 5px 20px var(--card-shadow);
-}
-.download-box h1{ text-align:center; margin-bottom:10px; color:#111827; }
-.download-box>p{ text-align:center; color:#666; margin-bottom:25px; }
-
-.file-info{
-    background:#f8fafc;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:25px;
-}
-.file-info p{ margin:10px 0; color:#374151; }
-.file-info b{ color:#111827; }
-
-/* COUNTDOWN */
-.countdown-box{ text-align:center; margin:30px 0; }
-.countdown-box p{ margin-bottom:10px; color:#555; }
-.countdown-box h2{
-    width:120px; height:120px; margin:auto; border-radius:50%; background:var(--primary); color:#fff;
-    display:flex; justify-content:center; align-items:center; font-size:42px; font-weight:bold;
-}
-
-/* Responsive adjustments for download page */
-@media (max-width:768px){
-    .download-box{ padding:20px; }
-    .countdown-box h2{ width:90px; height:90px; font-size:34px; }
-    .download-btn{ font-size:16px; }
-}
-
-/* SCROLL TOP BUTTON */
-.scroll-top-btn{
-    position:fixed; right:20px; bottom:20px; width:50px; height:50px; border:none; border-radius:50%;
-    background:var(--primary); color:#fff; font-size:22px; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,.2);
-    opacity:0; visibility:hidden; transform:translateY(20px); transition:.3s; z-index:999;
-}
-.scroll-top-btn.show{ opacity:1; visibility:visible; transform:translateY(0); }
-.scroll-top-btn:hover{ background:var(--primary-600); }
-
-/* POPUP & SIDEBAR */
-.download-popup{
-    position:fixed; right:20px; bottom:20px; width:280px; background:#fff; border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15); display:flex; gap:10px; padding:10px; align-items:center;
-    opacity:0; transform:translateY(30px); transition:.4s; z-index:9999;
-}
-.download-popup.show{ opacity:1; transform:translateY(0); }
-.download-popup img{ width:55px; height:75px; border-radius:8px; object-fit:cover; }
-.popup-content strong{ display:block; color:var(--primary); font-size:14px; }
-.popup-content p{ font-size:12px; color:#555; margin-top:4px; }
-
-.menu-toggle{ background:none; border:none; font-size:32px; cursor:pointer; padding:8px; margin-left:auto; }
-
-.overlay{ position:fixed; inset:0; background:rgba(0,0,0,.45); opacity:0; visibility:hidden; transition:.3s; z-index:10000; }
-.overlay.active{ opacity:1; visibility:visible; }
-
-.sidebar{
-    position:fixed; top:0; right:-300px; width:280px; height:100vh; background:#fff; box-shadow:-5px 0 20px rgba(0,0,0,.15);
-    transition:.35s; z-index:10001; padding:var(--header-height) 25px 25px; overflow-y:auto;
-}
-.sidebar.active{ right:0; }
-
-.close-menu{ border:none; background:none; font-size:28px; cursor:pointer; margin-bottom:20px; }
-
-.sidebar nav{ display:flex; flex-direction:column; gap:18px; }
-.sidebar a{ text-decoration:none; color:#333; font-size:17px; font-weight:600; }
-.sidebar a:hover{ color:var(--primary); }
-
-/* TABLET & DESKTOP CONTAINER WIDTHS */
-@media (min-width:769px) and (max-width:1024px){ .container{ width:92%; } }
-@media (min-width:1200px){ .container{ max-width:1280px; } }
-
-/* MOBILE heading size */
-@media (max-width:768px){ h2{ font-size:20px; } footer .container{ padding:25px 0; } }
-
-/* ===========================
-   RESET
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Inter,Segoe UI,sans-serif;
-    min-height:100vh;
-    overflow:hidden;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:linear-gradient(135deg,#2563eb,#1d4ed8,#60a5fa);
-}
-
-/* ===========================
-   BACKGROUND
-=========================== */
-
-.background{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    z-index:0;
-}
-
-.circle{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(30px);
-    opacity:.35;
-    animation:float 10s ease-in-out infinite;
-}
-
-.circle1{
-    width:280px;
-    height:280px;
-
-    background:#ffffff;
-
-    top:-80px;
-    left:-60px;
-}
-
-.circle2{
-    width:350px;
-    height:350px;
-
-    background:#93c5fd;
-
-    right:-120px;
-    top:40%;
-}
-
-.circle3{
-    width:220px;
-    height:220px;
-
-    background:#dbeafe;
-
-    bottom:-70px;
-    left:30%;
-}
-
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-25px);
-    }
-
-}
-
-/* ===========================
-   CONTAINER
-=========================== */
-
-.welcome{
-    width:100%;
-    padding:24px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    position:relative;
-    z-index:10;
-}
-
-/* ===========================
-   CARD
-=========================== */
-
-.card{
-
-    width:100%;
-    max-width:460px;
-
-    padding:42px;
-
-    border-radius:28px;
-
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(25px);
-
-    border:1px solid rgba(255,255,255,.25);
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.18);
+.text-center{
 
     text-align:center;
 
-    animation:fadeUp .8s ease;
 }
 
-@keyframes fadeUp{
+.hidden{
 
-    from{
-        opacity:0;
-        transform:translateY(35px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    display:none !important;
 
 }
 
-/* ===========================
-   LOGO
-=========================== */
-
-.logo{
-
-    width:90px;
-    height:90px;
-
-    margin:auto;
-    margin-bottom:20px;
-
-    display:block;
-}
-
-/* ===========================
-   TEXT
-=========================== */
-
-.card h1{
-
-    color:#fff;
-
-    font-size:2rem;
-
-    font-weight:700;
-}
-
-.card h2{
-
-    margin-top:10px;
-
-    color:#fff;
-
-    font-size:1.4rem;
-
-    font-weight:600;
-}
-
-.subtitle{
-
-    margin-top:18px;
-
-    color:rgba(255,255,255,.92);
-
-    line-height:1.7;
-
-    font-size:.95rem;
-}
-
-.quote{
-
-    margin-top:24px;
-
-    padding:16px;
-
-    border-radius:16px;
-
-    background:rgba(255,255,255,.15);
-
-    color:#fff;
-
-    font-style:italic;
-
-    font-size:.92rem;
-}
-
-/* ===========================
-   INPUT
-=========================== */
-
-.input-group{
-
-    margin-top:28px;
-
-    text-align:left;
-}
-
-.input-group label{
-
-    display:block;
-
-    margin-bottom:10px;
-
-    color:#fff;
-
-    font-weight:600;
-}
-
-.input-group input{
-
-    width:100%;
-
-    padding:15px 18px;
-
-    border:none;
-
-    border-radius:14px;
-
-    outline:none;
-
-    font-size:1rem;
-
-    transition:.3s;
-}
-
-.input-group input:focus{
-
-    box-shadow:
-    0 0 0 4px rgba(255,255,255,.25);
-
-}
-
-/* ===========================
-   BUTTON
-=========================== */
-
-button{
-
-    width:100%;
-
-    margin-top:24px;
-
-    padding:15px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#2563eb;
-
-    color:#fff;
-
-    font-size:1rem;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-button:hover{
-
-    transform:translateY(-3px);
-
-    background:#1d4ed8;
-
-    box-shadow:0 12px 25px rgba(37,99,235,.35);
-
-}
-
-/* ===========================
-   FOOTER TEXT
-=========================== */
-
-.small{
+.mt-20{
 
     margin-top:20px;
 
-    color:rgba(255,255,255,.85);
+}
 
-    font-size:.82rem;
+.mt-30{
 
-    line-height:1.6;
+    margin-top:30px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================================================
+   SCROLLBAR
+   =========================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ===========================================================
+   PART 2 - HEADER
+   Logo, User Profile, Search Box & Navigation
+   =========================================================== */
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    box-shadow:var(--shadow-sm);
+
+    z-index:9999;
+
+}
+
+.header .container{
+
+    padding:18px 0;
+
 }
 
 /* ===========================
-   RESPONSIVE
+   HEADER TOP
 =========================== */
 
-@media(max-width:480px){
+.header-top{
 
-.card{
+    display:flex;
 
-padding:30px 24px;
+    align-items:center;
 
-}
+    justify-content:space-between;
 
-.card h1{
+    gap:20px;
 
-font-size:1.7rem;
-
-}
-
-.card h2{
-
-font-size:1.2rem;
+    margin-bottom:18px;
 
 }
 
-.subtitle{
+/* ===========================
+   LOGO
+=========================== */
 
-font-size:.9rem;
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
 
 }
+
+.logo img{
+
+    width:200px;
+
+    height:auto;
+
+    object-fit:contain;
 
 }
 
@@ -967,50 +347,2203 @@ font-size:.9rem;
 
 .user-profile{
 
-display:flex;
-align-items:center;
-gap:12px;
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-left:auto;
 
 }
 
 .avatar{
 
-width:48px;
-height:48px;
+    width:46px;
 
-border-radius:50%;
+    height:46px;
 
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    border-radius:50%;
 
-color:#fff;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
 
-display:flex;
-justify-content:center;
-align-items:center;
+    color:#ffffff;
 
-font-size:18px;
-font-weight:700;
+    display:flex;
 
-box-shadow:0 8px 20px rgba(37,99,235,.25);
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    box-shadow:var(--shadow-sm);
 
 }
 
 .user-info{
 
-display:flex;
-flex-direction:column;
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.3;
 
 }
 
 .user-info span{
 
-font-size:13px;
-color:#666;
+    font-size:12px;
+
+    color:var(--text-light);
 
 }
 
 .user-info strong{
 
-font-size:16px;
+    font-size:15px;
+
+    color:var(--text);
+
+}
+
+/* ===========================
+   MENU BUTTON
+=========================== */
+
+.menu-toggle{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+
+    font-size:28px;
+
+    transition:var(--transition);
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+
+    display:flex;
+
+    width:100%;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    min-width:0;
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:1px solid var(--border);
+
+    border-right:none;
+
+    border-radius:14px 0 0 14px;
+
+    background:#ffffff;
+
+    font-size:15px;
+
+    transition:var(--transition);
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--primary);
+
+}
+
+.search-box button{
+
+    height:52px;
+
+    padding:0 24px;
+
+    border-radius:0 14px 14px 0;
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+.search-box button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    :root{
+
+        --header-height:175px;
+
+    }
+
+    .logo img{
+
+        width:160px;
+
+    }
+
+    .user-info{
+
+        display:none;
+
+    }
+
+    .avatar{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:16px;
+
+    }
+
+    .menu-toggle{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:24px;
+
+    }
+
+    .search-box input{
+
+        height:48px;
+
+        font-size:14px;
+
+    }
+
+    .search-box button{
+
+        height:48px;
+
+        padding:0 18px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (min-width:1200px){
+
+    .logo img{
+
+        width:220px;
+
+    }
+
+}
+
+/* ===========================================================
+   PART 3 - HERO & CATEGORY
+   =========================================================== */
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+/* Background Glow */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+    left:-120px;
+
+    filter:blur(15px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    bottom:-120px;
+    right:-80px;
+
+    filter:blur(20px);
+
+}
+
+/* Hero Content */
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero h1{
+
+    color:#ffffff;
+
+    font-size:clamp(2rem,5vw,3rem);
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    color:rgba(255,255,255,.9);
+
+    max-width:720px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* Hero Button */
+
+.hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:35px;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===========================
+   CATEGORY
+=========================== */
+
+.category{
+
+    background:#ffffff;
+
+}
+
+.category h2{
+
+    margin-bottom:22px;
+
+}
+
+/* Category List */
+
+.category-list{
+
+    display:flex;
+
+    gap:14px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+    padding-bottom:5px;
+
+}
+
+.category-list::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* Category Button */
+
+.category-btn{
+
+    flex-shrink:0;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    border:1px solid var(--primary);
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.category-btn:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:translateY(-2px);
+
+}
+
+.category-btn.active{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding:60px 18px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .hero-btn{
+
+        width:100%;
+
+    }
+
+    .category-btn{
+
+        padding:10px 18px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ===========================================================
+   PART 4 - EBOOK GRID & CARD
+   =========================================================== */
+
+/* ===========================
+   SECTION EBOOK
+=========================== */
+
+.ebooks{
+
+    background:#f8fafc;
+
+}
+
+.ebooks h2{
+
+    margin-bottom:28px;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.ebook-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:24px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.ebook-card{
+
+    background:var(--surface);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.ebook-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===========================
+   COVER
+=========================== */
+
+.ebook-cover{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ebook-cover img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.ebook-card:hover .ebook-cover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   CATEGORY BADGE
+=========================== */
+
+.category-badge{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.95);
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* ===========================
+   CARD BODY
+=========================== */
+
+.ebook-body{
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.ebook-body h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+    line-height:1.5;
+
+    color:var(--text);
+
+}
+
+.ebook-body p{
+
+    font-size:14px;
+
+    color:var(--text-light);
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   INFO
+=========================== */
+
+.ebook-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:auto;
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.ebook-btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-align:center;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.ebook-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .ebook-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+    }
+
+    .ebook-body{
+
+        padding:14px;
+
+    }
+
+    .ebook-body h3{
+
+        font-size:15px;
+
+    }
+
+    .ebook-body p{
+
+        font-size:13px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .ebook-grid{
+
+        gap:14px;
+
+    }
+
+    .ebook-body h3{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ===========================================================
+   PART 5 - DETAIL EBOOK & DOWNLOAD PAGE
+   =========================================================== */
+
+/* ===========================
+   DETAIL SECTION
+=========================== */
+
+.detail{
+
+    padding:60px 0;
+
+    background:#f8fafc;
+
+}
+
+/* ===========================
+   DETAIL BOX
+=========================== */
+
+.detail-box{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:40px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   COVER
+=========================== */
+
+.detail-cover img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    aspect-ratio:3/4;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.detail-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.detail-content h1{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.detail-content p{
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   META
+=========================== */
+
+.ebook-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:24px;
+
+}
+
+.ebook-meta span{
+
+    padding:8px 16px;
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   DOWNLOAD INFO
+=========================== */
+
+.download-info{
+
+    margin:30px 0;
+
+    padding:22px;
+
+    border-left:5px solid var(--primary);
+
+    background:#f8fbff;
+
+    border-radius:14px;
+
+}
+
+.download-info h3{
+
+    margin-bottom:12px;
+
+}
+
+.download-info ol{
+
+    margin-left:22px;
+
+}
+
+.download-info li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.download-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    background:var(--secondary);
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.download-btn:hover{
+
+    background:#15803d;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   DOWNLOAD PAGE
+=========================== */
+
+.download-page{
+
+    padding:60px 0;
+
+}
+
+.download-box{
+
+    max-width:820px;
+
+    margin:auto;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.download-box h1{
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+}
+
+.download-box>p{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   FILE INFO
+=========================== */
+
+.file-info{
+
+    background:#f8fafc;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:30px;
+
+}
+
+.file-info p{
+
+    margin:10px 0;
+
+}
+
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+.countdown-box{
+
+    text-align:center;
+
+    margin:35px 0;
+
+}
+
+.countdown-box h2{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   STATUS
+=========================== */
+
+.download-status{
+
+    margin-top:24px;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:#fff8e6;
+
+    color:#b45309;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .detail-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .detail-cover{
+
+        max-width:260px;
+
+        margin:auto;
+
+    }
+
+    .detail-content h1{
+
+        font-size:28px;
+
+    }
+
+    .download-box{
+
+        padding:24px;
+
+    }
+
+    .countdown-box h2{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:34px;
+
+    }
+
+    .download-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================================================
+   PART 6 - SIDEBAR, OVERLAY, POPUP & SCROLL TOP
+   =========================================================== */
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(3px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:9998;
+
+}
+
+.overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    max-width:85vw;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.12);
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+    overflow-y:auto;
+
+    padding:24px;
+
+}
+
+.sidebar.active{
+
+    right:0;
+
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-menu{
+
+    width:42px;
+
+    height:42px;
+
+    margin-left:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+
+    font-size:24px;
+
+}
+
+.close-menu:hover{
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   SIDEBAR NAVIGATION
+=========================== */
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-top:30px;
+
+    gap:8px;
+
+}
+
+.sidebar nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.sidebar nav a:hover{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   POPUP DOWNLOAD
+=========================== */
+
+.download-popup{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:320px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-lg);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(30px);
+
+    transition:.35s ease;
+
+    z-index:9997;
+
+}
+
+.download-popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.download-popup img{
+
+    width:60px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+.popup-content{
+
+    flex:1;
+
+}
+
+.popup-content strong{
+
+    display:block;
+
+    font-size:15px;
+
+    color:var(--text);
+
+    margin-bottom:6px;
+
+}
+
+.popup-content p{
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   SCROLL TO TOP
+=========================== */
+
+.scroll-top-btn{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:24px;
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    box-shadow:var(--shadow-md);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:var(--transition);
+
+    z-index:9996;
+
+}
+
+.scroll-top-btn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.scroll-top-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+
+        width:280px;
+
+    }
+
+    .download-popup{
+
+        right:12px;
+
+        left:12px;
+
+        width:auto;
+
+    }
+
+    .scroll-top-btn{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:20px;
+
+        right:16px;
+
+        bottom:16px;
+
+    }
+
+}
+
+/* ===========================================================
+   PART 7 - RESPONSIVE LAYOUT
+   Mobile • Tablet • Desktop • Large Desktop
+   =========================================================== */
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:1024px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .hero{
+
+        padding:70px 20px;
+
+    }
+
+    .ebook-grid{
+
+        grid-template-columns:repeat(3,minmax(0,1fr));
+
+        gap:20px;
+
+    }
+
+    .detail-box{
+
+        grid-template-columns:280px 1fr;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    :root{
+
+        --header-height:170px;
+
+    }
+
+    section{
+
+        padding:45px 0;
+
+    }
+
+    .header .container{
+
+        padding:14px 0;
+
+    }
+
+    .header-top{
+
+        gap:12px;
+
+        margin-bottom:14px;
+
+    }
+
+    .logo img{
+
+        width:160px;
+
+    }
+
+    .user-info{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:55px 18px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .hero-btn{
+
+        width:100%;
+
+    }
+
+    .category-list{
+
+        gap:10px;
+
+    }
+
+    .category-btn{
+
+        padding:10px 16px;
+
+        font-size:13px;
+
+    }
+
+    .ebook-grid{
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:16px;
+
+    }
+
+    .ebook-body{
+
+        padding:14px;
+
+    }
+
+    .ebook-body h3{
+
+        font-size:15px;
+
+    }
+
+    .ebook-body p{
+
+        font-size:13px;
+
+    }
+
+    .detail-box{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+    }
+
+    .detail-cover{
+
+        max-width:240px;
+
+        margin:auto;
+
+    }
+
+    .download-box{
+
+        padding:20px;
+
+    }
+
+    footer .container{
+
+        padding:24px 0;
+
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    :root{
+
+        --header-height:165px;
+
+    }
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .hero{
+
+        padding:45px 15px;
+
+    }
+
+    .hero h1{
+
+        font-size:26px;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .ebook-grid{
+
+        gap:14px;
+
+    }
+
+    .ebook-card{
+
+        border-radius:16px;
+
+    }
+
+    .ebook-body{
+
+        padding:12px;
+
+    }
+
+    .ebook-body h3{
+
+        font-size:14px;
+
+        line-height:1.4;
+
+    }
+
+    .ebook-body p{
+
+        display:none;
+
+    }
+
+    .ebook-btn{
+
+        padding:10px;
+
+        font-size:13px;
+
+    }
+
+    .countdown-box h2{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:30px;
+
+    }
+
+}
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (min-width:1400px){
+
+    .container{
+
+        max-width:1400px;
+
+    }
+
+    .ebook-grid{
+
+        grid-template-columns:repeat(5,minmax(0,1fr));
+
+    }
+
+}
+
+/* ===========================
+   ULTRA WIDE
+=========================== */
+
+@media (min-width:1700px){
+
+    .container{
+
+        max-width:1600px;
+
+    }
+
+    .ebook-grid{
+
+        grid-template-columns:repeat(6,minmax(0,1fr));
+
+    }
+
+}
+
+/* ===========================================================
+   PART 8 - FINAL
+   Animation • Utilities • Dark Mode • Print
+   =========================================================== */
+
+/* ===========================
+   FADE ANIMATION
+=========================== */
+
+.fade-in{
+
+    animation:fadeIn .6s ease both;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SCALE ANIMATION
+=========================== */
+
+.scale-in{
+
+    animation:scaleIn .35s ease both;
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   FLOAT ANIMATION
+=========================== */
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   LOADING SPINNER
+=========================== */
+
+.spinner{
+
+    width:36px;
+
+    height:36px;
+
+    border:4px solid #e5e7eb;
+
+    border-top-color:var(--primary);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   SKELETON LOADING
+=========================== */
+
+.skeleton{
+
+    background:linear-gradient(
+        90deg,
+        #ececec 25%,
+        #f8f8f8 50%,
+        #ececec 75%
+    );
+
+    background-size:200% 100%;
+
+    animation:skeleton 1.4s infinite;
+
+}
+
+@keyframes skeleton{
+
+    from{
+
+        background-position:200% 0;
+
+    }
+
+    to{
+
+        background-position:-200% 0;
+
+    }
+
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   CARD HOVER
+=========================== */
+
+.card-hover{
+
+    transition:var(--transition);
+
+}
+
+.card-hover:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===========================
+   TEXT UTILITIES
+=========================== */
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.text-secondary{
+
+    color:var(--secondary);
+
+}
+
+.text-muted{
+
+    color:var(--text-light);
+
+}
+
+.fw-bold{
+
+    font-weight:700;
+
+}
+
+.fw-medium{
+
+    font-weight:600;
+
+}
+
+.rounded{
+
+    border-radius:var(--radius-lg);
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   FLEX UTILITIES
+=========================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.space-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.gap-10{
+
+    gap:10px;
+
+}
+
+.gap-20{
+
+    gap:20px;
+
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+@media (prefers-color-scheme:dark){
+
+    body{
+
+        background:#0f172a;
+
+        color:#f8fafc;
+
+    }
+
+    .header,
+    .ebook-card,
+    .detail-box,
+    .download-box,
+    .sidebar{
+
+        background:#1e293b;
+
+        color:#f8fafc;
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4{
+
+        color:#ffffff;
+
+    }
+
+    p{
+
+        color:#cbd5e1;
+
+    }
+
+    .search-box input{
+
+        background:#334155;
+
+        border-color:#475569;
+
+        color:#ffffff;
+
+    }
+
+    .category-btn{
+
+        background:#1e293b;
+
+        color:#ffffff;
+
+        border-color:#475569;
+
+    }
+
+    .category-btn.active{
+
+        background:var(--primary);
+
+    }
+
+    footer{
+
+        background:#020617;
+
+    }
+
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@media print{
+
+    .header,
+    .sidebar,
+    .scroll-top-btn,
+    .download-popup,
+    .menu-toggle{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#ffffff;
+
+        color:#000000;
+
+        padding:0;
+
+    }
+
+}
+
+/* ===========================
+   IMAGE OPTIMIZATION
+=========================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ===========================
+   SMOOTH TRANSITION
+=========================== */
+
+a,
+button,
+input,
+textarea,
+img,
+.ebook-card,
+.category-btn{
+
+    transition:all .3s ease;
 
 }
