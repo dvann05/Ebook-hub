@@ -82,6 +82,8 @@ function updateUser(name){
 
 function login(){
 
+    console.log("Login dipanggil");
+
     const name = nameInput.value.trim();
 
     loginError.textContent = "";
