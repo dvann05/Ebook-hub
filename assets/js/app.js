@@ -13,7 +13,7 @@
 const grid = document.getElementById("ebookGrid");
 const pagination = document.getElementById("pagination");
 
-const BOOKS_PER_PAGE = 12;
+const BOOKS_PER_PAGE = 8;
 
 /* Ebook terbaru tampil paling atas */
 const books = [...ebooks].reverse();
