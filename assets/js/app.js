@@ -6,13 +6,42 @@
    RENDER EBOOK
 =========================== */
 
+/* ===========================
+   PAGINATION
+=========================== */
+
 const grid = document.getElementById("ebookGrid");
+const pagination = document.getElementById("pagination");
 
-if (grid && typeof ebooks !== "undefined") {
+const BOOKS_PER_PAGE = 12;
 
-    grid.innerHTML = ebooks
-        .map(ebook => createEbookCard(ebook))
+/* Ebook terbaru tampil paling atas */
+const books = [...ebooks].reverse();
+
+const params = new URLSearchParams(window.location.search);
+
+let currentPage = Number(params.get("page")) || 1;
+
+const totalPages = Math.ceil(
+    books.length / BOOKS_PER_PAGE
+);
+
+function renderBooks() {
+
+    const start =
+        (currentPage - 1) * BOOKS_PER_PAGE;
+
+    const end =
+        start + BOOKS_PER_PAGE;
+
+    const currentBooks =
+        books.slice(start, end);
+
+    grid.innerHTML = currentBooks
+        .map(book => createEbookCard(book))
         .join("");
+
+    renderPagination();
 
 }
 
