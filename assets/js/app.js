@@ -270,3 +270,29 @@ fadeElements.forEach(element => {
 =========================== */
 
 renderBooks();
+
+// ===== KODE YANG SUDAH ADA =====
+
+renderBooks();
+
+
+// ===== TAMBAHKAN DI BAWAH SINI =====
+
+function openBook(event, slug) {
+    event.preventDefault();
+
+    history.pushState({}, "", "/ebook/" + slug);
+
+    loadBook(slug);
+}
+
+function loadBook(slug) {
+    const book = ebooks.find(item => item.slug === slug);
+
+    if (!book) {
+        alert("Ebook tidak ditemukan");
+        return;
+    }
+
+    window.location.href = "detail.html?slug=" + slug;
+}
