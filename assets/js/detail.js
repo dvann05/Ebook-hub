@@ -6,12 +6,12 @@
    GET EBOOK
 =========================== */
 
-const params = new URLSearchParams(window.location.search);
-
-const slug = params.get("slug");
+const slug =
+    typeof EBOOK_SLUG !== "undefined"
+        ? EBOOK_SLUG
+        : new URLSearchParams(window.location.search).get("slug");
 
 const ebook = ebooks.find(book => book.slug === slug);
-
 /* ===========================
    SHOW DETAIL
 =========================== */
