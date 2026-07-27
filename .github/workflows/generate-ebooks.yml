@@ -1,0 +1,30 @@
+name: Generate Ebook Pages
+
+on:
+  push:
+    paths:
+      - "assets/js/data.js"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Ebook Pages
+        run: node scripts/generate-ebooks.js
+
+      - name: Commit Generated Files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto generate ebook pages"
