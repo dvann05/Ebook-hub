@@ -248,4 +248,22 @@ drive:"https://drive.google.com/drive/folders/1i5sZSDH0JZ0Xn_Bu2D8mfnfzZR-D5Dwy?
     description:"Koleksi 60 Skincare Social Media Templates siap edit untuk Instagram, Facebook, dan media sosial lainnya. Desain modern, bersih, dan profesional untuk membangun branding bisnis skincare dan produk kecantikan."
 },
 
+{
+    id:14,
+    title:"50 Facebook Post Templates",
+    category:"Produktivitas",
+    author:"EbookHub",
+    language:"Indonesia",
+    pages:50,
+    size:"50 MB",
+    format:"Template",
+    rating:4.8,
+    downloads:6400,
+    image:"assets/images/ebook/50facebook.webp",
+    banner:"assets/images/banner/banner.jpg",
+    file:"downloads/php.pdf",
+drive:"https://drive.google.com/drive/folders/1wRt6S0YpHfC1GR1T1Q8atXaOwFhpoHMc?usp=drive_link",
+    description:"Koleksi 50 Facebook Post Templates siap edit untuk promosi bisnis, produk, layanan, dan konten media sosial. Desain modern, profesional, dan mudah disesuaikan untuk meningkatkan kualitas postingan Facebook."
+}
+
 ]; 
