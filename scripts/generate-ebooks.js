@@ -26,3 +26,35 @@ if (content.endsWith(";")) {
 const ebooks = eval(content);
 
 console.log(`Total Ebook : ${ebooks.length}`);
+
+ebooks.forEach((ebook) => {
+
+    const html = `<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>${ebook.title} | EbookHub</title>
+
+<meta http-equiv="refresh" content="0; url=../detail.html?slug=${ebook.slug}">
+
+</head>
+
+<body>
+
+<p>Mengalihkan ke halaman ebook...</p>
+
+</body>
+</html>`;
+
+    fs.writeFileSync(
+        path.join(outputDir, `${ebook.slug}.html`),
+        html,
+        "utf8"
+    );
+
+});
+
+console.log("Semua halaman ebook berhasil dibuat.");
