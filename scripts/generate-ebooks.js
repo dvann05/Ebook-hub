@@ -34,65 +34,93 @@ ebooks.forEach((ebook) => {
 
 <head>
 
+<!-- ========================================= -->
+<!-- Basic Meta -->
+<!-- ========================================= -->
+
 <meta charset="UTF-8">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>${ebook.title} | Download Ebook Gratis | EbookHub</title>
+<meta name="theme-color" content="#16a34a">
 
-<meta name="description" content="${ebook.description}">
+<meta name="color-scheme" content="light dark">
 
-<meta name="keywords" content="${ebook.title}, ${ebook.category}, ${ebook.author}, ebook gratis, download ebook, ebook PDF, ${ebook.language}, EbookHub">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="generator" content="EbookHub Generator">
+
+<meta name="application-name" content="EbookHub">
 
 <meta name="author" content="${ebook.author}">
 
 <meta name="publisher" content="EbookHub">
 
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<meta name="googlebot" content="index, follow">
-
-<meta name="bingbot" content="index, follow">
-
-<meta name="rating" content="General">
+<meta name="language" content="${ebook.language}">
 
 <meta name="distribution" content="Global">
 
-<meta name="language" content="${ebook.language}">
+<meta name="rating" content="General">
 
-<meta name="theme-color" content="#16a34a">
+<!-- ========================================= -->
+<!-- SEO -->
+<!-- ========================================= -->
 
-<meta name="application-name" content="EbookHub">
+<title>${ebook.title} | Download Ebook Gratis | EbookHub</title>
 
-<meta name="generator" content="EbookHub Generator">
+<meta name="description" content="${ebook.description}">
 
-<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="keywords" content="${ebook.title}, ${ebook.category}, ${ebook.author}, ebook, ebook gratis, download ebook, ebook pdf, EbookHub">
 
-<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 
-<meta name="color-scheme" content="light dark">
+<meta name="googlebot" content="index,follow">
+
+<meta name="bingbot" content="index,follow">
 
 <link rel="canonical" href="https://ebookhub.my.id/ebook/${ebook.slug}.html">
 
+<link rel="alternate" hreflang="id" href="https://ebookhub.my.id/ebook/${ebook.slug}.html">
+
+<!-- ========================================= -->
+<!-- Icons -->
+<!-- ========================================= -->
+
 <link rel="icon" href="../assets/images/favicon.ico">
 
-<link rel="apple-touch-icon" href="../assets/images/icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="../assets/images/icon-192.png">
+
+<link rel="apple-touch-icon" sizes="512x512" href="../assets/images/icon-512.png">
 
 <link rel="manifest" href="../manifest.json">
+
+<!-- ========================================= -->
+<!-- Performance -->
+<!-- ========================================= -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+
 <link rel="stylesheet" href="../assets/css/style.css">
 
+<!-- ========================================= -->
 <!-- Open Graph -->
+<!-- ========================================= -->
 
 <meta property="og:type" content="website">
 
 <meta property="og:site_name" content="EbookHub">
+
+<meta property="og:locale" content="id_ID">
 
 <meta property="og:title" content="${ebook.title}">
 
@@ -108,9 +136,9 @@ ebooks.forEach((ebook) => {
 
 <meta property="og:image:alt" content="${ebook.title}">
 
-<meta property="og:locale" content="id_ID">
-
+<!-- ========================================= -->
 <!-- Twitter Card -->
+<!-- ========================================= -->
 
 <meta name="twitter:card" content="summary_large_image">
 
@@ -122,7 +150,9 @@ ebooks.forEach((ebook) => {
 
 <meta name="twitter:image:alt" content="${ebook.title}">
 
-<!-- JSON-LD -->
+<!-- ========================================= -->
+<!-- Structured Data -->
+<!-- ========================================= -->
 
 <script type="application/ld+json">
 {
@@ -145,9 +175,10 @@ ebooks.forEach((ebook) => {
 "url":"https://ebookhub.my.id/assets/images/logo.png"
 }
 },
-"inLanguage":"${ebook.language}",
 "bookFormat":"${ebook.format}",
+"inLanguage":"${ebook.language}",
 "numberOfPages":"${ebook.pages}",
+"genre":"${ebook.category}",
 "aggregateRating":{
 "@type":"AggregateRating",
 "ratingValue":"${ebook.rating}",
