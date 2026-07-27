@@ -138,7 +138,7 @@ ebooks.forEach((ebook) => {
 
 <meta property="og:url" content="https://ebookhub.my.id/ebook/${ebook.slug}.html">
 
-<meta property="og:image" content="https://ebookhub.my.id/${ebook.banner}">
+<meta property="og:image" content="https://ebookhub.my.id/${ebook.image}">
 
 <meta property="og:image:width" content="1200">
 
@@ -156,7 +156,7 @@ ebooks.forEach((ebook) => {
 
 <meta name="twitter:description" content="${ebook.description}">
 
-<meta name="twitter:image" content="https://ebookhub.my.id/${ebook.banner}">
+<meta name="twitter:image" content="https://ebookhub.my.id/${ebook.image}">
 
 <meta name="twitter:image:alt" content="${ebook.title}">
 
