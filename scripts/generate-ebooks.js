@@ -215,6 +215,82 @@ ebooks.forEach((ebook) => {
 
 <main>
 
+<section class="detail">
+
+<div class="container">
+
+<div class="detail-box">
+
+<!-- Cover -->
+
+<div class="detail-cover">
+
+<img id="ebookImage" src="" alt="">
+
+</div>
+
+<!-- Informasi -->
+
+<div class="detail-content">
+
+<h1 id="ebookTitle"></h1>
+
+<div class="ebook-meta">
+
+<span id="ebookRating"></span>
+
+<span id="ebookDownloads"></span>
+
+<span id="ebookFormat"></span>
+
+</div>
+
+<hr>
+
+<p><b>Kategori :</b> <span id="ebookCategory"></span></p>
+
+<p><b>Penulis :</b> <span id="ebookAuthor"></span></p>
+
+<p><b>Ukuran :</b> <span id="ebookSize"></span></p>
+
+<p><b>Jumlah Halaman :</b> <span id="ebookPages"></span></p>
+
+<p><b>Bahasa :</b> <span id="ebookLanguage"></span></p>
+
+<br>
+
+<p id="ebookDescription"></p>
+
+<br>
+
+<div class="ads">
+
+<img id="ebookBanner" src="" alt="">
+
+</div>
+
+<br>
+
+<button class="guide-btn" onclick="showGuide()">
+
+📖 Cara Download
+
+</button>
+
+<a id="downloadBtn" href="#" class="download-btn">
+
+Download Ebook
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
 
 <script>
