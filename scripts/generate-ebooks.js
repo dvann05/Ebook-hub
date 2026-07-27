@@ -293,6 +293,36 @@ Download Ebook
 
 </main>
 
+<section class="ebooks">
+
+<div class="container">
+
+<h2>Ebook Terkait</h2>
+
+<div
+class="ebook-grid"
+id="relatedBooks">
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 EbookHub. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
 <script>
 
 const EBOOK_SLUG = "${ebook.slug}";
