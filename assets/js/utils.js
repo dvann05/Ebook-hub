@@ -76,6 +76,7 @@ function createEbookCard(ebook) {
 
             <a
                 href="/ebook/${ebook.slug}"
+                onclick="openBook(event, '${ebook.slug}')">
                 class="ebook-btn"
             >
                 Lihat Detail
