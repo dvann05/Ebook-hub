@@ -20,10 +20,16 @@ if (ebook) {
 
     document.title = `${ebook.title} | EbookHub`;
 
-    document.getElementById("ebookImage").src = ebook.image;
+    document.getElementById("ebookImage").src =
+    typeof EBOOK_SLUG !== "undefined"
+        ? "../" + ebook.image
+        : ebook.image;
     document.getElementById("ebookImage").alt = ebook.title;
 
-    document.getElementById("ebookBanner").src = ebook.banner || ebook.image;
+    document.getElementById("ebookBanner").src =
+    typeof EBOOK_SLUG !== "undefined"
+        ? "../" + (ebook.banner || ebook.image)
+        : (ebook.banner || ebook.image);
 
     document.getElementById("ebookTitle").textContent = ebook.title;
 
