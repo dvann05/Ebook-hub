@@ -46,7 +46,8 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
 ebooks.forEach(book => {
 
     xml += `  <url>
-    <loc>${BASE_URL}/detail.html?id=${book.id}</loc>
+    <loc>${BASE_URL}/ebook/${book.slug}.html</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
