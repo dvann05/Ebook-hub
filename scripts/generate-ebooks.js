@@ -112,6 +112,16 @@ ebooks.forEach((ebook) => {
 
 <link rel="stylesheet" href="../assets/css/style.css">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SY6HKRF447"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SY6HKRF447');
+</script>
+
 <!-- ========================================= -->
 <!-- Open Graph -->
 <!-- ========================================= -->
