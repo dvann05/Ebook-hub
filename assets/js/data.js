@@ -204,12 +204,30 @@ drive:"https://drive.google.com/drive/folders/1KR0Vj2XOKxzdTyh2BlDx_bg5ktpJv2oo"
     size:"3Gb+",
     format:"Template & Effects",
     rating:4.9,
-    downloads:12540,
+    downloads:1500,
     image:"assets/images/ebook/premiere.webp",
     banner:"assets/images/banner/banner.jpg",
     file:"",
 drive:"https://drive.google.com/drive/folders/18ZK-rtIl7F3NExEotF8oPLct_qvad9V0",
     description:"Koleksi Premiere Pro Templates & Effects premium untuk mempercepat proses editing video. Berisi template intro, outro, transition, title, motion graphics, slideshow, dan efek profesional yang siap pakai untuk berbagai kebutuhan konten."
+},
+
+{
+    id:12,
+    title:"540 Fashion Social Media Templates",
+    category:"Desain",
+    author:"EbookHub",
+    language:"Indonesia",
+    pages:540,
+    size:"200+ MB",
+    format:"PDF",
+    rating:4.8,
+    downloads:9800,
+    image:"assets/images/ebook/fashion1.webp",
+    banner:"assets/images/banner/banner.jpg",
+    file:"downloads/javascript.pdf",
+drive:"https://drive.google.com/drive/folders/1Tm5q_9PVBaRDnfhGlyW-DHbJvtlBVcOK?usp=drive_link",
+    description:"Koleksi 540 Fashion Social Media Templates siap edit untuk Instagram, Facebook, dan berbagai platform media sosial. Desain modern, elegan, dan profesional untuk meningkatkan branding bisnis fashion."
 }
 
 ]; 
