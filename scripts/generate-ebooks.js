@@ -191,6 +191,28 @@ ebooks.forEach((ebook) => {
 
 <body>
 
+<header class="header">
+
+<div class="container">
+
+<div class="logo">
+
+📚 EbookHub
+
+</div>
+
+<form class="search-box">
+
+<input type="text" placeholder="Cari ebook...">
+
+<button>Cari</button>
+
+</form>
+
+</div>
+
+</header>
+
 <main>
 
 </main>
