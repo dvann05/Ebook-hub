@@ -58,13 +58,13 @@ function createEbookCard(book) {
 
             <img
                 src="${asset(book.image)}"
-                alt="${ebook.title}"
+                alt="${book.title}"
                 loading="lazy"
             >
 
             <span class="category-badge">
 
-                ${ebook.category}
+                ${book.category}
 
             </span>
 
@@ -72,20 +72,20 @@ function createEbookCard(book) {
 
         <div class="ebook-body">
 
-            <h3>${ebook.title}</h3>
+            <h3>${book.title}</h3>
 
-            <p>${ebook.description || "Temukan ebook berkualitas untuk meningkatkan pengetahuan dan keterampilan Anda."}</p>
+            <p>${book.description || "Temukan ebook berkualitas untuk meningkatkan pengetahuan dan keterampilan Anda."}</p>
 
             <div class="ebook-info">
 
-                <span>⭐ ${formatRating(ebook.rating)}</span>
+                <span>⭐ ${formatRating(book.rating)}</span>
 
-                <span>📥 ${formatDownloads(ebook.downloads)}</span>
+                <span>📥 ${formatDownloads(book.downloads)}</span>
 
             </div>
 
             <a
-    href="ebook/${ebook.slug}.html"
+    href="ebook/${book.slug}.html"
     class="ebook-btn"
 >
     Lihat Detail
