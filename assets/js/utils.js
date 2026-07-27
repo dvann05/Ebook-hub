@@ -15,6 +15,14 @@ function asset(path) {
 
 }
 
+function pageUrl(slug) {
+
+    return location.pathname.startsWith("/ebook/")
+        ? `${slug}.html`
+        : `ebook/${slug}.html`;
+
+}
+
 
 function formatDownloads(downloads) {
 
