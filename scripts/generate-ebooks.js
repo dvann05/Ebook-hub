@@ -191,7 +191,9 @@ ebooks.forEach((ebook) => {
 
 <body>
 
-<div id="ebookDetail"></div>
+<main>
+
+</main>
 
 <script>
 
@@ -200,6 +202,8 @@ const EBOOK_SLUG = "${ebook.slug}";
 </script>
 
 <script src="../assets/js/data.js"></script>
+
+<script src="../assets/js/utils.js"></script>
 
 <script src="../assets/js/detail.js"></script>
 
