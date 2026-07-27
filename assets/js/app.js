@@ -264,3 +264,13 @@ fadeElements.forEach(element => {
     observer.observe(element);
 
 });
+
+/* ===========================
+   INITIAL LOAD
+=========================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    renderBooks();
+
+});
