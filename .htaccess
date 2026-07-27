@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Jangan ubah jika file/folder memang ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# URL SEO
+RewriteRule ^ebook/([a-zA-Z0-9-]+)/?$ detail.html?slug=$1 [L,QSA]
