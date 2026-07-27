@@ -273,8 +273,6 @@ renderBooks();
 
 // ===== KODE YANG SUDAH ADA =====
 
-renderBooks();
-
 
 // ===== TAMBAHKAN DI BAWAH SINI =====
 
