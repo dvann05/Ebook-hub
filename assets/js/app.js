@@ -285,7 +285,7 @@ function openBook(event, slug) {
 }
 
 function loadBook(slug) {
-    const book = ebooks.find(item => item.slug === slug);
+    const book = books.find(item => item.slug === slug);
 
     if (!book) {
         alert("Ebook tidak ditemukan");
