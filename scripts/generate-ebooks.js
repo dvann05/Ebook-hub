@@ -201,13 +201,15 @@ ebooks.forEach((ebook) => {
 
 </div>
 
-<form class="search-box">
+<div class="search-box">
 
 <input type="text" placeholder="Cari ebook...">
 
-<button>Cari</button>
+<button type="button">
 
-</form>
+Cari
+
+</div>
 
 </div>
 
