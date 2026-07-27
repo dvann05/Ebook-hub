@@ -2,6 +2,7 @@ const ebooks = [
 
 {
     id:1,
+    slug:"belajar-html-css",
     title:"Belajar HTML & CSS Dari Nol",
     category:"Programming",
     author:"EbookHub",
@@ -20,6 +21,7 @@ drive:"",
 
 {
     id:2,
+    slug:"javascript-fundamental",
     title:"JavaScript Fundamental",
     category:"Programming",
     author:"EbookHub",
@@ -38,6 +40,7 @@ drive:"",
 
 {
     id:3,
+    slug:"belajar-php",
     title:"Belajar PHP",
     category:"Programming",
     author:"EbookHub",
@@ -56,6 +59,7 @@ drive:"",
 
 {
     id:4,
+    slug:"belajar-mysql",
     title:"Belajar MySQL",
     category:"Database",
     author:"EbookHub",
@@ -74,6 +78,7 @@ drive:"",
 
 {
     id:5,
+    slug:"panduan-bisnis-digital",
     title:"Panduan Bisnis Digital",
     category:"Bisnis",
     author:"EbookHub",
@@ -92,6 +97,7 @@ drive:"",
 
 {
     id:6,
+    slug:"ai-untuk-pemula",
     title:"AI untuk Pemula",
     category:"AI",
     author:"EbookHub",
@@ -110,6 +116,7 @@ drive:"",
 
 {
     id:7,
+    slug:"canva-masterclass",
     title:"Canva Masterclass",
     category:"Canva",
     author:"EbookHub",
@@ -128,6 +135,7 @@ drive:"https://drive.google.com/drive/folders/1jh3dmU--Ou3MBulGsMfpvPnxCETumHdV?
 
 {
     id:8,
+    slug:"dasar-desain-grafis",
     title:"Dasar-dasar Desain Grafis",
     category:"Desain",
     author:"EbookHub",
@@ -146,6 +154,7 @@ drive:"https://drive.google.com/drive/folders/1wtOigdg7HcwuZ59e-YpuWIg64ptApLnI"
 
 {
     id:9,
+    slug:"digital-marketing",
     title:"Digital Marketing",
     category:"Marketing",
     author:"EbookHub",
@@ -164,6 +173,7 @@ drive:"https://drive.google.com/drive/folders/11c5i2DHEvixo04uGrVAnT_dPqawN47RI"
 
 {
     id: 10,
+    slug:"70+worksheet-bahasainggris-anak",
 
     title: "70+ Worksheet Bahasa Inggris Anak-Anak",
 
@@ -196,6 +206,7 @@ drive:"https://drive.google.com/drive/folders/1KR0Vj2XOKxzdTyh2BlDx_bg5ktpJv2oo"
     
 {
     id:11,
+    slug:"premiere-pro-templates-effects",
     title:"Premiere Pro Templates & Effects",
     category:"Desain",
     author:"EbookHub",
@@ -214,6 +225,7 @@ drive:"https://drive.google.com/drive/folders/18ZK-rtIl7F3NExEotF8oPLct_qvad9V0"
 
 {
     id:12,
+    slug:"540-fashion-sosial-media-templates",
     title:"540 Fashion Social Media Templates",
     category:"Desain",
     author:"EbookHub",
@@ -232,6 +244,7 @@ drive:"https://drive.google.com/drive/folders/1Tm5q_9PVBaRDnfhGlyW-DHbJvtlBVcOK?
 
 {
     id:13,
+    slug:"60skincare-sosialmedia-temolates",
     title:"60 Skincare Social Media Templates",
     category:"Desain",
     author:"EbookHub",
@@ -250,6 +263,7 @@ drive:"https://drive.google.com/drive/folders/1i5sZSDH0JZ0Xn_Bu2D8mfnfzZR-D5Dwy?
 
 {
     id:14,
+    slug:"50-facebook-post-templates",
     title:"50 Facebook Post Templates",
     category:"Produktivitas",
     author:"EbookHub",
