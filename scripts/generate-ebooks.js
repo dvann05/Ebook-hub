@@ -189,11 +189,14 @@ ebooks.forEach((ebook) => {
 "inLanguage":"${ebook.language}",
 "numberOfPages":"${ebook.pages}",
 "genre":"${ebook.category}",
-"aggregateRating":{
-"@type":"AggregateRating",
-"ratingValue":"${ebook.rating}",
-"ratingCount":"${ebook.downloads}"
-}
+
+"offers":{
+"@type":"Offer",
+"price":"0",
+"priceCurrency":"IDR",
+"availability":"https://schema.org/InStock"
+},
+
 }
 </script>
 
