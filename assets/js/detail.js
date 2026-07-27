@@ -8,9 +8,9 @@
 
 const params = new URLSearchParams(window.location.search);
 
-const id = params.get("id");
+const slug = params.get("slug");
 
-const ebook = getEbookById(id);
+const ebook = ebooks.find(book => book.slug === slug);
 
 /* ===========================
    SHOW DETAIL
@@ -101,7 +101,7 @@ if (ebook && related) {
 
     related.innerHTML = ebooks
 
-        .filter(book => book.id != ebook.id)
+        .filter(book => book.slug !== ebook.slug)
 
         .slice(0, 4)
 
