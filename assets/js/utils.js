@@ -57,7 +57,7 @@ function createEbookCard(ebook) {
         <div class="ebook-cover">
 
             <img
-                src="${ebook.image}"
+                src="${asset(book.image)}"
                 alt="${ebook.title}"
                 loading="lazy"
             >
