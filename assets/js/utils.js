@@ -5,6 +5,16 @@
 /* ===========================
    FORMAT DOWNLOAD
 =========================== */
+function asset(path) {
+
+    if (!path) return "";
+
+    return location.pathname.startsWith("/ebook/")
+        ? "../" + path
+        : path;
+
+}
+
 
 function formatDownloads(downloads) {
 
