@@ -171,7 +171,7 @@ ebooks.forEach((ebook) => {
 "name":"${ebook.title}",
 "description":"${ebook.description}",
 "url":"https://ebookhub.my.id/ebook/${ebook.slug}.html",
-"image":"https://ebookhub.my.id/${ebook.banner}",
+"image":"https://ebookhub.my.id/${ebook.image}",
 "author":{
 "@type":"Person",
 "name":"${ebook.author}"
