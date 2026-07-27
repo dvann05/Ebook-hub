@@ -75,12 +75,12 @@ function createEbookCard(ebook) {
             </div>
 
             <a
-                href="/ebook/${ebook.slug}"
-                onclick="openBook(event, '${ebook.slug}')">
-                class="ebook-btn"
-            >
-                Lihat Detail
-            </a>
+    href="/ebook/${ebook.slug}"
+    class="ebook-btn"
+    onclick="openBook(event, '${ebook.slug}')"
+>
+    Lihat Detail
+</a>
 
         </div>
 
