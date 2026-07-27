@@ -75,7 +75,7 @@ function createEbookCard(ebook) {
             </div>
 
             <a
-                href="detail.html?id=${ebook.id}"
+                href="/ebook/${ebook.slug}"
                 class="ebook-btn"
             >
                 Lihat Detail
