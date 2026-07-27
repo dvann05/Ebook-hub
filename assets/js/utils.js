@@ -93,7 +93,7 @@ function createEbookCard(book) {
             </div>
 
             <a
-    href="ebook/${book.slug}.html"
+    href="${pageUrl(book.slug)}"
     class="ebook-btn"
 >
     Lihat Detail
