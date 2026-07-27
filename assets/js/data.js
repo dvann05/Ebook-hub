@@ -228,6 +228,24 @@ drive:"https://drive.google.com/drive/folders/18ZK-rtIl7F3NExEotF8oPLct_qvad9V0"
     file:"downloads/javascript.pdf",
 drive:"https://drive.google.com/drive/folders/1Tm5q_9PVBaRDnfhGlyW-DHbJvtlBVcOK?usp=drive_link",
     description:"Koleksi 540 Fashion Social Media Templates siap edit untuk Instagram, Facebook, dan berbagai platform media sosial. Desain modern, elegan, dan profesional untuk meningkatkan branding bisnis fashion."
-}
+},
+
+{
+    id:13,
+    title:"60 Skincare Social Media Templates",
+    category:"Desain",
+    author:"EbookHub",
+    language:"Indonesia",
+    pages:60,
+    size:"10 MB",
+    format:"PDF",
+    rating:4.9,
+    downloads:8400,
+    image:"assets/images/ebook/skincare1.webp",
+    banner:"assets/images/banner/skincare1.jpg",
+    file:"downloads/php.pdf",
+drive:"https://drive.google.com/drive/folders/1i5sZSDH0JZ0Xn_Bu2D8mfnfzZR-D5Dwy?usp=sharing",
+    description:"Koleksi 60 Skincare Social Media Templates siap edit untuk Instagram, Facebook, dan media sosial lainnya. Desain modern, bersih, dan profesional untuk membangun branding bisnis skincare dan produk kecantikan."
+},
 
 ]; 
