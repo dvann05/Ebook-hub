@@ -55,7 +55,7 @@ if (ebook) {
         ebook.language;
 
     document.getElementById("downloadBtn").href =
-        `download.html?id=${ebook.id}`;
+    `../download.html?id=${ebook.id}`;
 
 } else {
 
