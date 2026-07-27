@@ -8,7 +8,7 @@ const ebooks = [
     author:"EbookHub",
     language:"Indonesia",
     pages:245,
-    size:"11 MB",
+    size:"10 MB",
     format:"PDF",
     rating:4.9,
     downloads:12540,
