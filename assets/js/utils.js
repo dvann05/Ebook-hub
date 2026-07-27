@@ -48,7 +48,7 @@ function formatRating(rating) {
    CREATE EBOOK CARD
 =========================== */
 
-function createEbookCard(ebook) {
+function createEbookCard(book) {
 
     return `
 
