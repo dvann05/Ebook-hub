@@ -195,8 +195,7 @@ ebooks.forEach((ebook) => {
 "price":"0",
 "priceCurrency":"IDR",
 "availability":"https://schema.org/InStock"
-},
-
+}
 }
 </script>
 
