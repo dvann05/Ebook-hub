@@ -25,6 +25,8 @@ jobs:
 
       - name: Generate Ebook Pages
         run: node scripts/generate-ebooks.js
+      - name: Generate RSS Feed
+        run: node scripts/generate-rss.js
 
       - name: Commit Generated Files
         uses: stefanzweifel/git-auto-commit-action@v5
