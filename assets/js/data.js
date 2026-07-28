@@ -723,6 +723,58 @@ const ebooks = [
     modified: "2026-07-27",
 
     description: "Koleksi 50 Facebook Post Templates siap edit untuk promosi bisnis, produk, layanan, dan konten media sosial. Desain modern, profesional, serta mudah disesuaikan untuk meningkatkan kualitas dan daya tarik postingan Facebook."
+},
+
+{
+    id: 15,
+
+    slug: "mastering-etsy-pinterest",
+
+    title: "Mastering Etsy & Pinterest",
+
+    shortTitle: "Etsy & Pinterest",
+
+    category: "Produktivitas",
+
+    tags: [
+        "Mastering Etsy",
+        "Pinterest Marketing",
+        "Etsy SEO",
+        "Digital Marketing",
+        "Online Business"
+    ],
+
+    author: "EbookHub",
+
+    publisher: "EbookHub",
+
+    language: "Indonesia",
+
+    pages: 58,
+
+    size: "15 MB",
+
+    format: "PDF",
+
+    version: "1.0",
+
+    rating: 4.9,
+
+    downloads: 1254,
+
+    image: "assets/images/ebook/etsypinterest.webp",
+
+    banner: "assets/images/banner/banner.jpg",
+
+    file: "downloads/html-css.pdf",
+
+    drive: "https://drive.google.com/drive/folders/1LTQkoIClPtSqMWPtvPTZ4rjgMfmOffwP?usp=sharing",
+
+    published: "2026-07-28",
+
+    modified: "2026-07-28",
+
+    description: "Mastering Etsy & Pinterest adalah panduan lengkap untuk membangun bisnis digital, meningkatkan traffic organik, dan menghasilkan lebih banyak penjualan melalui strategi Etsy SEO serta Pinterest Marketing. Pelajari langkah demi langkah cara mengoptimalkan toko, membuat pin yang viral, meningkatkan visibilitas produk, dan mengembangkan bisnis online secara efektif untuk pemula maupun profesional."
 }
 
 ];
