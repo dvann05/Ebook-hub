@@ -64,21 +64,7 @@ if (ebook) {
     document.getElementById("downloadBtn").href =
     `../download.html?id=${ebook.id}`;
 
-}
-
-   <script>
-  atOptions = {
-    'key' : '69fcd5fd56a30742013741f1be4d3c19',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/69fcd5fd56a30742013741f1be4d3c19/invoke.js"></script>
-
-   
-else {
+} else {
 
     document.querySelector("main").innerHTML = `
 
