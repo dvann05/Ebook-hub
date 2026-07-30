@@ -775,6 +775,61 @@ const ebooks = [
     modified: "2026-07-28",
 
     description: "Mastering Etsy & Pinterest adalah panduan lengkap untuk membangun bisnis digital, meningkatkan traffic organik, dan menghasilkan lebih banyak penjualan melalui strategi Etsy SEO serta Pinterest Marketing. Pelajari langkah demi langkah cara mengoptimalkan toko, membuat pin yang viral, meningkatkan visibilitas produk, dan mengembangkan bisnis online secara efektif untuk pemula maupun profesional."
+},
+
+{
+    id: 16,
+
+    slug: "24-story-quotes-post-banner",
+
+    title: "24 Story Quotes Post Banner",
+
+    shortTitle: "Story Quotes",
+
+    category: "Desain",
+
+    tags: [
+        "Story Quotes",
+        "Instagram Story",
+        "Facebook Story",
+        "Canva Template",
+        "Social Media",
+        "Quote Design",
+        "Content Creator",
+        "Editable Template"
+    ],
+
+    author: "EbookHub",
+
+    publisher: "EbookHub",
+
+    language: "Indonesia",
+
+    pages: 25,
+
+    size: "20 MB",
+
+    format: "PDF + Canva",
+
+    version: "1.0",
+
+    rating: 4.9,
+
+    downloads: 986,
+
+    image: "assets/images/ebook/quotes1.webp",
+
+    banner: "assets/images/banner/banner.jpg",
+
+    file: "downloads/24-story-quotes-post-banner.pdf",
+
+    drive: "https://drive.google.com/drive/folders/1DeeKJGy0zgPvcJ3LTTMh00N0xoYkYiqd?usp=drive_link",
+
+    published: "2026-07-31",
+
+    modified: "2026-07-31",
+
+    description: "24 Story Quotes Post Banner merupakan koleksi 24 template desain Story modern yang siap digunakan untuk Instagram, Facebook, WhatsApp, dan berbagai media sosial lainnya. Desain dibuat dengan tampilan profesional, mudah diedit di Canva, serta cocok untuk konten motivasi, inspirasi, promosi bisnis, personal branding, maupun konten harian."
 }
 
 ];
