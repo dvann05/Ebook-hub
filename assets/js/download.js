@@ -72,7 +72,21 @@ if (ebook) {
                         window.location.href = ebook.drive;
                         
 
-                    } else {
+                    }
+
+                        <script>
+  atOptions = {
+    'key' : '69fcd5fd56a30742013741f1be4d3c19',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/69fcd5fd56a30742013741f1be4d3c19/invoke.js"></script>
+                           
+                    
+                    else {
 
                         alert("Link Google Drive untuk ebook ini belum tersedia.");
 
