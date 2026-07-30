@@ -36,6 +36,10 @@ if (ebook) {
     document.getElementById("ebookDescription").textContent =
         ebook.description;
 
+<script async="async" data-cfasync="false" src="https://pl30606502.effectivecpmnetwork.com/3b67ada01fdfcc941786da614332d638/invoke.js"></script>
+<div id="container-3b67ada01fdfcc941786da614332d638"></div>
+
+
     document.getElementById("ebookRating").textContent =
         "⭐ " + Number(ebook.rating).toFixed(1);
 
