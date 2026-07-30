@@ -14,9 +14,6 @@ const filePages = document.getElementById("filePages");
 const countdown = document.getElementById("countdown");
 const btn = document.getElementById("downloadBtn");
 
-<script async="async" data-cfasync="false" src="https://pl30606502.effectivecpmnetwork.com/3b67ada01fdfcc941786da614332d638/invoke.js"></script>
-<div id="container-3b67ada01fdfcc941786da614332d638"></div>
-
 
 // Jika ebook ditemukan
 if (ebook) {
