@@ -34,9 +34,6 @@ ebooks.forEach((ebook) => {
 
 <head>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5688619397789698"
-     crossorigin="anonymous"></script>
-
 <!-- ========================================= -->
 <!-- Basic Meta -->
 <!-- ========================================= -->
