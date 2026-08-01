@@ -27,7 +27,7 @@ const ebooks = [
 
     pages: 245,
 
-    size: "15 MB",
+    size: "16 MB",
 
     format: "PDF",
 
