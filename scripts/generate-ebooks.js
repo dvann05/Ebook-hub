@@ -27,6 +27,14 @@ const ebooks = eval(content);
 
 console.log(`Total Ebook : ${ebooks.length}`);
 
+const DOMAIN = "https://ebookhub.my.id";
+
+const imageUrl = (img) => {
+  if (!img) return `${DOMAIN}/assets/images/placeholder.webp`;
+  if (img.startsWith("http")) return img;
+  return `${DOMAIN}/${img.replace(/^\/+/, "")}`;
+};
+
 ebooks.forEach((ebook) => {
 
     const html = `<!DOCTYPE html>
