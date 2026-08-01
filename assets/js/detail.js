@@ -108,9 +108,12 @@ if (ebook && related) {
 
     related.innerHTML = ebooks
 
-        .filter(book => book.slug !== ebook.slug)
+        .filter(book =>
+    book.slug !== ebook.slug &&
+    book.category === ebook.category
+)
 
-        .slice(0, 4)
+.slice(0,4)
 
         .map(book => createEbookCard(book))
 
