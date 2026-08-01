@@ -206,6 +206,31 @@ content="${imageUrl(ebook.image)}">
 "availability":"https://schema.org/InStock"
 }
 }
+
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://ebookhub.my.id/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"${ebook.category}",
+      "item":"https://ebookhub.my.id/category.html?category=${encodeURIComponent(ebook.category)}"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "name":"${ebook.title}",
+      "item":"https://ebookhub.my.id/ebook/${ebook.slug}.html"
+    }
+  ]
+}
 </script>
 
 </head>
