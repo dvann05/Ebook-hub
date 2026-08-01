@@ -106,16 +106,40 @@ const related = document.getElementById("relatedBooks");
 
 if (ebook && related) {
 
-    related.innerHTML = ebooks
+    const relatedBooks = ebooks
 
-        .filter(book =>
-    book.slug !== ebook.slug &&
-    book.category === ebook.category
-)
+        .filter(book => book.slug !== ebook.slug)
 
-.slice(0,4)
+        .map(book => {
 
-        .map(book => createEbookCard(book))
+            let score = 0;
+
+            if (book.category === ebook.category)
+                score += 10;
+
+            const sameTags = book.tags.filter(tag =>
+                ebook.tags.includes(tag)
+            ).length;
+
+            score += sameTags * 5;
+
+            if (book.author === ebook.author)
+                score += 1;
+
+            return {
+                ...book,
+                score
+            };
+
+        })
+
+        .sort((a, b) => b.score - a.score)
+
+        .slice(0, 4);
+
+    related.innerHTML = relatedBooks
+
+        .map(createEbookCard)
 
         .join("");
 
