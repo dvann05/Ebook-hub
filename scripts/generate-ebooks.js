@@ -180,7 +180,7 @@ content="${imageUrl(ebook.image)}">
 "name":"${ebook.title}",
 "description":"${ebook.description}",
 "url":"https://ebookhub.my.id/ebook/${ebook.slug}.html",
-"image":"https://ebookhub.my.id/${ebook.image}",
+"image":"${imageUrl(ebook.image)}",
 "author":{
 "@type":"Person",
 "name":"${ebook.author}"
