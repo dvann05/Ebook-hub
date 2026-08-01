@@ -830,6 +830,58 @@ const ebooks = [
     modified: "2026-07-31",
 
     description: "24 Story Quotes Post Banner merupakan koleksi 24 template desain Story modern yang siap digunakan untuk Instagram, Facebook, WhatsApp, dan berbagai media sosial lainnya. Desain dibuat dengan tampilan profesional, mudah diedit di Canva, serta cocok untuk konten motivasi, inspirasi, promosi bisnis, personal branding, maupun konten harian."
+},
+
+{
+    id: 17,
+
+    slug: "jago-shopee",
+
+    title: "Jago Shopee: Panduan Lengkap Jualan Online",
+
+    shortTitle: "Jago Shopee",
+
+    category: "Bisnis",
+
+    tags: [
+        "Shopee",
+        "Marketplace",
+        "Jualan Online",
+        "Digital Marketing",
+        "E-Commerce"
+    ],
+
+    author: "EbookHub",
+
+    publisher: "EbookHub",
+
+    language: "Indonesia",
+
+    pages: 210,
+
+    size: "100 MB",
+
+    format: "Ecoursd",
+
+    version: "1.0",
+
+    rating: 4.9,
+
+    downloads: 8450,
+
+    image: "assets/images/ebook/jago-shopee.webp",
+
+    banner: "assets/images/banner/banner.jpg",
+
+    file: "downloads/jago-shopee.pdf",
+
+    drive: "https://drive.google.com/drive/folders/1pwm-igbU3Akf9sllAJYh3FY9e__MVHG5",
+
+    published: "2026-08-01",
+
+    modified: "2026-08-01",
+
+    description: "Panduan lengkap menjadi penjual sukses di Shopee. Pelajari cara riset produk, optimasi judul dan deskripsi, SEO Shopee, strategi harga, promosi, iklan Shopee, meningkatkan konversi, mengelola pesanan, mendapatkan ulasan positif, hingga membangun toko yang berkembang secara konsisten. Cocok untuk pemula maupun seller yang ingin meningkatkan penjualan."
 }
 
 ];
