@@ -857,7 +857,7 @@ const ebooks = [
 
     language: "Indonesia",
 
-    pages: 210,
+    pages: 10,
 
     size: "100 MB",
 
