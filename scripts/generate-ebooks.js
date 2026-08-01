@@ -146,7 +146,7 @@ ebooks.forEach((ebook) => {
 
 <meta property="og:url" content="https://ebookhub.my.id/ebook/${ebook.slug}.html">
 
-<meta property="og:image" content="https://ebookhub.my.id/${ebook.image}">
+<meta property="og:image" content="${imageUrl(ebook.image)}">
 
 <meta property="og:image:width" content="1200">
 
