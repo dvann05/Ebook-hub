@@ -164,7 +164,8 @@ ebooks.forEach((ebook) => {
 
 <meta name="twitter:description" content="${ebook.description}">
 
-<meta name="twitter:image" content="https://ebookhub.my.id/${ebook.image}">
+<meta name="twitter:image"
+content="${imageUrl(ebook.image)}">
 
 <meta name="twitter:image:alt" content="${ebook.title}">
 
