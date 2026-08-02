@@ -934,6 +934,58 @@ const ebooks = [
     modified: "2026-08-02",
 
     description: "Panduan lengkap membangun personal branding yang kuat di era digital. Pelajari cara menentukan identitas diri, menemukan niche, membuat konten yang menarik, mengembangkan audiens, meningkatkan kredibilitas, membangun kepercayaan, memanfaatkan media sosial secara efektif, serta menciptakan peluang bisnis dan karier melalui personal branding yang profesional."
+},
+
+    {
+    id: 19,
+
+    slug: "strategi-konten-marketing",
+
+    title: "Strategi Konten Marketing",
+
+    shortTitle: "Konten Marketing",
+
+    category: "Digital Marketing",
+
+    tags: [
+        "Content Marketing",
+        "Digital Marketing",
+        "Social Media",
+        "Content Creator",
+        "Branding"
+    ],
+
+    author: "EbookHub",
+
+    publisher: "EbookHub",
+
+    language: "Indonesia",
+
+    pages: 27,
+
+    size: "10 MB",
+
+    format: "PDF",
+
+    version: "1.0",
+
+    rating: 4.8,
+
+    downloads: 9740,
+
+    image: "assets/images/ebook/strategi-konten-marketing.webp",
+
+    banner: "",
+
+    file: "",
+
+    drive: "https://drive.google.com/uc?export=download&id=1CPRFNkvKc_4QmnC0fuoJzJMxkWZpEQTD",
+
+    published: "2026-08-02",
+
+    modified: "2026-08-02",
+
+    description: "Panduan lengkap menyusun strategi konten marketing yang efektif untuk meningkatkan jangkauan, engagement, dan penjualan. Pelajari riset audiens, perencanaan content pillar, content calendar, copywriting, SEO, storytelling, distribusi konten, analisis performa, hingga strategi mengembangkan brand di berbagai platform digital. Cocok untuk pebisnis, content creator, UMKM, dan digital marketer."
 }
 
 ];
