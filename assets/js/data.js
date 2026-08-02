@@ -882,6 +882,58 @@ const ebooks = [
     modified: "2026-08-01",
 
     description: "Panduan lengkap menjadi penjual sukses di Shopee. Pelajari cara riset produk, optimasi judul dan deskripsi, SEO Shopee, strategi harga, promosi, iklan Shopee, meningkatkan konversi, mengelola pesanan, mendapatkan ulasan positif, hingga membangun toko yang berkembang secara konsisten. Cocok untuk pemula maupun seller yang ingin meningkatkan penjualan."
+},
+
+    {
+    id: 18,
+
+    slug: "kelas-personal-branding",
+
+    title: "Kelas Personal Branding",
+
+    shortTitle: "Personal Branding",
+
+    category: "Bisnis",
+
+    tags: [
+        "Personal Branding",
+        "Content Creator",
+        "Social Media",
+        "Digital Marketing",
+        "Self Development"
+    ],
+
+    author: "EbookHub",
+
+    publisher: "EbookHub",
+
+    language: "Indonesia",
+
+    pages: 20,
+
+    size: "50 MB",
+
+    format: "Ecourse",
+
+    version: "1.0",
+
+    rating: 4.9,
+
+    downloads: 6320,
+
+    image: "assets/images/ebook/kelas-personal-branding.webp",
+
+    banner: "assets/images/banner/banner.jpg",
+
+    file: "",
+
+    drive: "https://drive.google.com/drive/folders/1GecNa3NL4jPj_dWl-vPLcHA4nMkLT-cm?usp=drive_link",
+
+    published: "2026-08-02",
+
+    modified: "2026-08-02",
+
+    description: "Panduan lengkap membangun personal branding yang kuat di era digital. Pelajari cara menentukan identitas diri, menemukan niche, membuat konten yang menarik, mengembangkan audiens, meningkatkan kredibilitas, membangun kepercayaan, memanfaatkan media sosial secara efektif, serta menciptakan peluang bisnis dan karier melalui personal branding yang profesional."
 }
 
 ];
