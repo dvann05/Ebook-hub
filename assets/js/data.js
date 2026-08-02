@@ -975,7 +975,7 @@ const ebooks = [
 
     image: "assets/images/ebook/strategi-konten-marketing.webp",
 
-    banner: "",
+    banner: "assets/images/banner/strategi-marketing.webp",
 
     file: "",
 
